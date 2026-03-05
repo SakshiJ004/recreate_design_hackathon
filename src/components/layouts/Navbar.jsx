@@ -67,7 +67,7 @@ const Navbar = ({ visible = true }) => {
     text-white shadow-lg nav-diagonal
     flex items-center justify-between
     px-8 py-2.5
-    2xl:px-16 2xl:py-2
+    2xl:px-14 2xl:py-2
 ">
                 <ul className="
     flex items-center font-medium tracking-wide
@@ -91,8 +91,8 @@ const Navbar = ({ visible = true }) => {
     bg-white text-[var(--viva-navy)] font-semibold rounded-xl
     transition-all duration-300
     hover:bg-[var(--viva-gold)] hover:text-white whitespace-nowrap
-    px-3 py-1 text-[11px]
-    2xl:px-6 2xl:py-2 2xl:text-sm
+    px-3 py-1 text-[12px]
+    2xl:px-5 2xl:py-2 2xl:text-[14px]
 ">
                     Portals
                 </button>

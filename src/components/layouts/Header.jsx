@@ -361,29 +361,29 @@ import logo from '../../assets/images/viva-logo.png'
 import Navbar from './Navbar'
 
 const NAV_LINKS = [
-    { label: "About Us", href: "/#about" },
-    { label: "Programmes", href: "/#programmes" },
-    { label: "Admission", href: "/admissions" },
+    { label: "About Us",    href: "/#about" },
+    { label: "Programmes",  href: "/#programmes" },
+    { label: "Admission",   href: "/admissions" },
     { label: "Examination", href: "/#examination" },
     { label: "Campus Life", href: "/#campus-life" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Contact Us",  href: "/contact" },
 ]
 
 const Header = () => {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen]   = useState(false)
     const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
-    const [searchQuery, setSearchQuery] = useState('')
-    const [scrolled, setScrolled] = useState(false)
-    const [navVisible, setNavVisible] = useState(true)
+    const [searchQuery, setSearchQuery]         = useState('')
+    const [scrolled, setScrolled]               = useState(false)
+    const [navVisible, setNavVisible]           = useState(true)
 
-    const manualToggle = React.useRef(false)
-    const lastScrollY = React.useRef(0)
+    const manualToggle  = React.useRef(false)
+    const lastScrollY   = React.useRef(0)
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
-            const scrollingDown = currentScrollY > lastScrollY.current
-            lastScrollY.current = currentScrollY
+            const scrollingDown  = currentScrollY > lastScrollY.current
+            lastScrollY.current  = currentScrollY
 
             if (currentScrollY > 50) {
                 setScrolled(true)
@@ -644,15 +644,13 @@ const Header = () => {
             </div>
 
             {/* Overlay */}
-            {
-                mobileMenuOpen && (
-                    <div
-                        className="xl:hidden fixed inset-0 bg-black/40 z-40"
-                        onClick={() => setMobileMenuOpen(false)}
-                    />
-                )
-            }
-        </header >
+            {mobileMenuOpen && (
+                <div
+                    className="xl:hidden fixed inset-0 bg-black/40 z-40"
+                    onClick={() => setMobileMenuOpen(false)}
+                />
+            )}
+        </header>
     )
 }
 

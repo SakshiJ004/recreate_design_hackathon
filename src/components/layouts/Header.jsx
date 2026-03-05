@@ -361,29 +361,29 @@ import logo from '../../assets/images/viva-logo.png'
 import Navbar from './Navbar'
 
 const NAV_LINKS = [
-    { label: "About Us",    href: "/#about" },
-    { label: "Programmes",  href: "/#programmes" },
-    { label: "Admission",   href: "/admissions" },
+    { label: "About Us", href: "/#about" },
+    { label: "Programmes", href: "/#programmes" },
+    { label: "Admission", href: "/admissions" },
     { label: "Examination", href: "/#examination" },
     { label: "Campus Life", href: "/#campus-life" },
-    { label: "Contact Us",  href: "/contact" },
+    { label: "Contact Us", href: "/contact" },
 ]
 
 const Header = () => {
-    const [mobileMenuOpen, setMobileMenuOpen]   = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
-    const [searchQuery, setSearchQuery]         = useState('')
-    const [scrolled, setScrolled]               = useState(false)
-    const [navVisible, setNavVisible]           = useState(true)
+    const [searchQuery, setSearchQuery] = useState('')
+    const [scrolled, setScrolled] = useState(false)
+    const [navVisible, setNavVisible] = useState(true)
 
-    const manualToggle  = React.useRef(false)
-    const lastScrollY   = React.useRef(0)
+    const manualToggle = React.useRef(false)
+    const lastScrollY = React.useRef(0)
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
-            const scrollingDown  = currentScrollY > lastScrollY.current
-            lastScrollY.current  = currentScrollY
+            const scrollingDown = currentScrollY > lastScrollY.current
+            lastScrollY.current = currentScrollY
 
             if (currentScrollY > 50) {
                 setScrolled(true)
@@ -413,12 +413,13 @@ const Header = () => {
     return (
         <header className={`sticky top-0 z-[100] bg-[#F8FAFC] border-b border-gray-200 transition-all duration-500 ${scrolled ? 'shadow-lg' : ''}`}>
 
-            <div className="
+            {/* <div className="
                 px-3 py-2
                 md:px-6 md:py-3
                 xl:px-10 xl:py-4
                 2xl:px-16 2xl:py-5
-            ">
+            "> */}
+            <div className="px-3 py-1.5 md:px-6 md:py-2 xl:px-10 xl:py-3 2xl:px-16 2xl:py-4">
                 <div className="flex items-center justify-between">
 
                     {/* ── Logo + Name ── */}
@@ -427,39 +428,39 @@ const Header = () => {
                             <img
                                 src={logo}
                                 alt="viva-logo"
-                                className="
-                                    w-auto object-contain
-                                    h-9
-                                    md:h-12
-                                    lg:h-16
-                                    xl:h-20
-                                    2xl:h-28
-                                "
+                                className="w-auto object-contain h-9 md:h-11 lg:h-14 xl:h-16 2xl:h-24"
                             />
                         </a>
-                        <div className="
+                        {/* <div className="
                             leading-none tracking-wide font-extrabold
                             text-xs
                             md:text-xl
                             lg:text-2xl
                             xl:text-3xl
                             2xl:text-4xl
-                        ">
+                        "> */}
+                        <div className="leading-none tracking-wide font-extrabold text-xs md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
                             <span className="block text-[var(--viva-navy)]">VIVA</span>
                             <span className="block text-[var(--viva-red)]">COLLEGE</span>
                         </div>
                     </div>
 
                     {/* ── Desktop Right — Search + Apply + Hamburger ── */}
-                    <div className={`hidden xl:flex gap-4 2xl:gap-6 transition-all duration-300 ${scrolled ? 'items-center self-center pb-6' : 'items-start self-start pt-2'}`}>
+                    <div className={`hidden xl:flex gap-3 2xl:gap-6 transition-all duration-300 ${scrolled ? 'items-center self-center pb-6' : 'items-start self-start pt-2'}`}>
 
                         {/* Search bar */}
-                        <div className="
+                        {/* <div className="
                             flex items-center border border-gray-400 rounded-full bg-white
                             px-3 py-2 w-[320px]
                             xl:px-3 xl:py-2 xl:w-[360px]
                             2xl:px-4 2xl:py-2.5 2xl:w-[500px]
-                        ">
+                        "> */}
+                        <div className="
+    flex items-center border border-gray-400 rounded-full bg-white
+    px-3 py-1.5 w-[280px] text-xs
+    xl:px-3 xl:py-2 xl:w-[320px] xl:text-sm
+    2xl:px-4 2xl:py-2.5 2xl:w-[480px] 2xl:text-base
+">
                             <input
                                 type="text"
                                 value={searchQuery}
@@ -499,8 +500,8 @@ const Header = () => {
                             className="
                                 relative group overflow-hidden rounded-full font-bold text-white
                                 transition-all duration-300
-                                px-6 py-2.5 text-sm
-                                xl:px-7 xl:py-2.5 xl:text-sm
+                                px-5 py-2 text-xs
+                                xl:px-5 xl:py-2 xl:text-sm
                                 2xl:px-10 2xl:py-3 2xl:text-lg
                             "
                             style={{ background: 'var(--viva-red)' }}

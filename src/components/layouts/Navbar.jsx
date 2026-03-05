@@ -49,14 +49,22 @@ const Navbar = ({ visible = true }) => {
     }
 
     return (
+        // <nav className={`
+        //     hidden xl:block absolute left-1/2 -translate-x-[37%] z-30
+        //     transition-all duration-500
+        //     bottom-[-22px] w-[82%]
+        //     2xl:bottom-[-24px] 2xl:w-[80%]
+        //     3xl:bottom-[-30px] 3xl:w-[75%]
+        //     ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
+        // `}>
         <nav className={`
-            hidden xl:block absolute left-1/2 -translate-x-[37%] z-30
-            transition-all duration-500
-            bottom-[-22px] w-[82%]
-            2xl:bottom-[-24px] 2xl:w-[80%]
-            3xl:bottom-[-30px] 3xl:w-[75%]
-            ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
-        `}>
+    hidden xl:block absolute left-1/2 z-30
+    transition-all duration-500
+    -translate-x-[42%] bottom-[-22px] w-[82%]
+    2xl:-translate-x-[40%] 2xl:bottom-[-24px] 2xl:w-[80%]
+    3xl:-translate-x-[38%] 3xl:bottom-[-30px] 3xl:w-[75%]
+    ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
+`}>
             <div className="
                 bg-gradient-to-r from-[#1F2F5E] to-[#5973b1]
                 text-white shadow-lg nav-diagonal

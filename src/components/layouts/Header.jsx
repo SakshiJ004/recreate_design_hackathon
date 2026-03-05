@@ -425,7 +425,7 @@ const Header = () => {
                                 className="w-auto object-contain h-9 md:h-11 lg:h-14 xl:h-16 2xl:h-20"
                             />
                         </a>
-                        <div className="leading-none tracking-wide font-extrabold text-xs md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
+                        <div className="leading-none tracking-wide font-extrabold text-xs md:text-md lg:text-xl xl:text-2xl 2xl:text-3xl">
                             <span className="block text-[var(--viva-navy)]">VIVA</span>
                             <span className="block text-[var(--viva-red)]">COLLEGE</span>
                         </div>
@@ -610,7 +610,7 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-                
+
 
                 <div className="px-8 mt-8 flex flex-col gap-4">
                     <button

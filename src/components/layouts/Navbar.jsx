@@ -67,13 +67,13 @@ const Navbar = ({ visible = true }) => {
     text-white shadow-lg nav-diagonal
     flex items-center justify-between
     px-8 py-2.5
-    2xl:px-16 2xl:py-4
+    2xl:px-16 2xl:py-2
 ">
                 <ul className="
     flex items-center font-medium tracking-wide
     cursor-pointer whitespace-nowrap
     gap-5 text-[12px]
-    2xl:gap-12 2xl:text-base
+    2xl:gap-10 2xl:text-[14px]
 ">
                     {NAV_LINKS.map((link, i) => (
                         <li key={i} className="whitespace-nowrap">

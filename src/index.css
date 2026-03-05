@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@theme {
+    --breakpoint-3xl: 2440px;
+}
 
 :root {
     --viva-red: #C8102E;

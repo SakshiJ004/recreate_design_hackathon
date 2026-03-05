@@ -434,7 +434,7 @@ const Header = () => {
                                     h-9
                                     md:h-12
                                     lg:h-14
-                                    xl:h-16
+                                    xl:h-14
                                     2xl:h-30
                                     3xl:h-28
                                 "

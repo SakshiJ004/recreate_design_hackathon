@@ -58,8 +58,8 @@ const Navbar = ({ visible = true }) => {
         <nav className={`
     hidden xl:block absolute left-1/2 z-30
     transition-all duration-500
-    -translate-x-[37%] bottom-[-24px] w-[82%]
-    2xl:bottom-[-28px] 2xl:w-[76%]
+    -translate-x-[38%] bottom-[-24px] w-[82%]
+    2xl:bottom-[-30px] 2xl:w-[76%]
     ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
 `}>
             <div className="

@@ -129,7 +129,7 @@ const Header = () => {
 
     return (
         <header className={`sticky top-0 z-[100] bg-[#F8FAFC] border-b border-gray-200 transition-all duration-500 ${scrolled ? 'shadow-lg' : ''}`}>
-            <div className='px-3 md:px-6 xl:px-14 py-2 md:py-3 xl:py-3'>
+            <div className='px-3 md:px-6 xl:px-16 py-2 md:py-3 xl:py-5'>
                 <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? 'items-center' : 'items-center'}`}>
 
                     {/* Logo + Name */}
@@ -138,11 +138,11 @@ const Header = () => {
                             <img
                                 src={logo}
                                 alt="viva-logo"
-                                className="h-10 md:h-14 lg:h-20 xl:h-20 w-auto object-contain"
+                                className="h-10 md:h-14 lg:h-20 xl:h-30 w-auto object-contain"
                             />
                         </a>
 
-                        <div className="leading-none tracking-wide text-sm md:text-xl lg:text-2xl xl:text-3xl font-extrabold">
+                        <div className="leading-none tracking-wide text-sm md:text-2xl lg:text-3xl xl:text-4xl font-extrabold">
                             <span className='block text-[var(--viva-navy)]'>VIVA</span>
                             <span className='block text-[var(--viva-red)]'>COLLEGE</span>
                         </div>
@@ -150,13 +150,13 @@ const Header = () => {
 
                     {/* Right side: Search */}
                     <div className={`hidden xl:flex gap-6 transition-all duration-300 ${scrolled ? 'items-center self-center pb-6' : 'items-start self-start pt-2'}`}>
-                        <div className="flex items-center border border-gray-400 rounded-full px-4 py-2 w-[450px] bg-white">
+                        <div className="flex items-center border border-gray-400 rounded-full px-4 py-2.5 w-[500px] bg-white">
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="What do you want to search?"
-                                className="flex-1 outline-none text-[12px] text-gray-500 bg-transparent ml-2"
+                                className="flex-1 outline-none text-base text-gray-500 bg-transparent ml-2"
                             />
                             {searchQuery ? (
                                 <button onClick={() => setSearchQuery('')} className="text-gray-400 hover:text-[var(--viva-red)] transition-colors cursor-pointer">
@@ -176,7 +176,7 @@ const Header = () => {
 
                         {/* Apply Now Button */}
                         <button
-                            className="relative group overflow-hidden px-6 py-2 rounded-full text-[14px] font-bold text-white transition-all duration-300"
+                            className="relative group overflow-hidden px-10 py-3 rounded-full text-lg font-bold text-white transition-all duration-300"
                             style={{ background: 'var(--viva-red)' }}
                         >
                             {/* Shine animation */}

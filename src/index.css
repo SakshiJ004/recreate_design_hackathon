@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+    --viva-red: #C8102E;
+    --viva-navy: #1A2D5A;
+    --viva-gold: #D4A017;
+    --viva-dark: #0F1C3D;
+}
+
+.gold-dot {
+    color: var(--viva-gold);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+}
+
+/* ── Ticker ── */
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-content {
+    animation: ticker-scroll 50s linear infinite;
+    white-space: nowrap;
+    /* display: inline-block; */
+}
+
+.ticker-content:hover {
+    animation-play-state: paused;
+}
+
+/* ── Navbar Diagonal Shape ── */
+.nav-diagonal {
+    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+}
+
+.navbar-transition {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* हे add कर: */
+.notice-text:hover {
+    color: var(--viva-gold);
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-33.33%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInNext {
+    from {
+        opacity: 0.4;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInPrev {
+    from {
+        opacity: 0.4;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.alumni-slide-next {
+    animation: slideInNext 0.3s ease both;
+}
+
+.alumni-slide-prev {
+    animation: slideInPrev 0.3s ease both;
+}

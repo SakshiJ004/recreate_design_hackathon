@@ -417,8 +417,8 @@ const Header = () => {
                 px-3   py-1.5
                 md:px-5  md:py-2
                 lg:px-8  lg:py-2.5
-                xl:px-10 xl:py-3
-                2xl:px-12 2xl:py-3
+                xl:px-12 xl:py-4
+                2xl:px-16 2xl:py-4
                 3xl:px-16 3xl:py-5
             ">
                 <div className="flex items-center justify-between">
@@ -435,7 +435,7 @@ const Header = () => {
                                     md:h-12
                                     lg:h-14
                                     xl:h-16
-                                    2xl:h-18
+                                    2xl:h-30
                                     3xl:h-28
                                 "
                             />
@@ -445,9 +445,9 @@ const Header = () => {
                             text-[10px]
                             md:text-lg
                             lg:text-xl
-                            xl:text-2xl
-                            2xl:text-2xl
-                            3xl:text-4xl
+                            xl:text-3xl
+                            2xl:text-4xl
+                            3xl:text-5xl
                         ">
                             <span className="block text-[var(--viva-navy)]">VIVA</span>
                             <span className="block text-[var(--viva-red)]">COLLEGE</span>
@@ -464,8 +464,8 @@ const Header = () => {
                             flex items-center border border-gray-400 rounded-full bg-white
                             px-3 py-1.5  w-[260px]
                             xl:px-3 xl:py-2   xl:w-[300px]
-                            2xl:px-3 2xl:py-2 2xl:w-[380px]
-                            3xl:px-4 3xl:py-2.5 3xl:w-[500px]
+                            2xl:px-6 2xl:py-4 2xl:w-[500px]
+                            3xl:px-4 3xl:py-2.5 3xl:w-[520px]
                         ">
                             <input
                                 type="text"
@@ -476,7 +476,7 @@ const Header = () => {
                                     flex-1 outline-none bg-transparent text-gray-500 ml-2
                                     text-xs
                                     xl:text-xs
-                                    2xl:text-sm
+                                    2xl:text-[16px]
                                     3xl:text-base
                                 "
                             />
@@ -504,7 +504,7 @@ const Header = () => {
                                 transition-all duration-300
                                 px-5  py-2    text-xs
                                 xl:px-5  xl:py-2    xl:text-xs
-                                2xl:px-7  2xl:py-2.5  2xl:text-sm
+                                2xl:px-8  2xl:py-4  2xl:text-[16px]
                                 3xl:px-10 3xl:py-3    3xl:text-lg
                             "
                             style={{ background: 'var(--viva-red)' }}
@@ -526,11 +526,11 @@ const Header = () => {
                                 className="p-2 rounded-lg hover:bg-gray-100 text-[var(--viva-navy)] transition-colors cursor-pointer"
                             >
                                 {navVisible ? (
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 3xl:w-7 3xl:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 2xl:w-8 2xl:w-8 3xl:w-9 3xl:h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
                                     </svg>
                                 ) : (
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 3xl:w-7 3xl:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 2xl:w-8 2xl:w-8 3xl:w-9 3xl:h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
                                     </svg>
                                 )}

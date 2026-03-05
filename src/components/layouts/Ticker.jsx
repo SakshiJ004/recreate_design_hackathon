@@ -52,7 +52,7 @@ export default function Ticker() {
             <div className="overflow-hidden flex-1 h-full flex items-center">
                 {/* <div className="ticker-content flex items-center text-sm font-medium"> */}
                 <div
-                    className="ticker-content flex items-center text-sm font-medium"
+                    className="ticker-content flex items-center text-[12px] font-medium"
                     style={{ color: '#1F2F5E  ' }}
                 >
 

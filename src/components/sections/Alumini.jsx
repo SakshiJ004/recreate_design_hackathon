@@ -554,7 +554,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 // ── Images — uncomment when you add photos ──
-import nikhilImg   from '../../assets/images/nikhi_jain.png'
+import nikhilImg   from '../../assets/images/nikhi_Jain.png'
 import utsavImg    from '../../assets/images/utsav_Shetty.png'
 import uttungImg   from '../../assets/images/uttung thakur.png'
 import adityaImg   from '../../assets/images/aditya.jpg'

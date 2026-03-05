@@ -36,7 +36,7 @@ export default function Ticker() {
     return (
         <div
             className="relative z-[100] overflow-hidden flex items-center viva-font"
-            style={{ background: '#F1F5F9', height: '42px', boxShadow: '0 1px 6px rgba(0,0,0,0.08)' }}>
+            style={{ background: '#F1F5F9', height: '36px', boxShadow: '0 1px 6px rgba(0,0,0,0.08)' }}>
 
             {/* Label badge */}
             <div
@@ -52,7 +52,7 @@ export default function Ticker() {
             <div className="overflow-hidden flex-1 h-full flex items-center">
                 {/* <div className="ticker-content flex items-center text-sm font-medium"> */}
                 <div
-                    className="ticker-content flex items-center text-base font-medium"
+                    className="ticker-content flex items-center text-sm font-medium"
                     style={{ color: '#1F2F5E  ' }}
                 >
 

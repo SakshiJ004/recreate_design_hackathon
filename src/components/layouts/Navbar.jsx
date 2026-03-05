@@ -53,9 +53,8 @@ const Navbar = ({ visible = true }) => {
             hidden xl:block absolute left-1/2 -translate-x-[37%] z-30
             transition-all duration-500
             bottom-[-22px] w-[82%]
-            xl:bottom-[-24px] xl:w-[80%]
-            2xl:bottom-[-30px] 2xl:w-[75%]
-            3xl:bottom-[-34px] 3xl:w-[70%]
+            2xl:bottom-[-24px] 2xl:w-[80%]
+            3xl:bottom-[-30px] 3xl:w-[75%]
             ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
         `}>
             <div className="
@@ -63,16 +62,15 @@ const Navbar = ({ visible = true }) => {
                 text-white shadow-lg nav-diagonal
                 flex items-center justify-between
                 px-8    py-2
-                xl:px-12  xl:py-3
-                2xl:px-20  2xl:py-4
-                3xl:px-24 3xl:py-6
+                2xl:px-12  2xl:py-3
+                3xl:px-20  3xl:py-4
             ">
                 <ul className="
                     flex items-center font-medium tracking-wide
                     cursor-pointer whitespace-nowrap
                     gap-5     text-[11px]
-                    xl:gap-8    xl:text-[13px]
-                    2xl:gap-16   2xl:text-[16px]
+                    2xl:gap-8    2xl:text-[13px]
+                    3xl:gap-14   3xl:text-lg
                 ">
                     {NAV_LINKS.map((link, i) => (
                         <li key={i} className="whitespace-nowrap">
@@ -92,8 +90,8 @@ const Navbar = ({ visible = true }) => {
                     transition-all duration-300
                     hover:bg-[var(--viva-gold)] hover:text-white whitespace-nowrap
                     px-3    py-1    text-[10px]
-                    xl:px-4   xl:py-1.5  xl:text-xs
-                    2xl:px-6   2xl:py-2    2xl:text-[16px]
+                    2xl:px-4   2xl:py-1.5  2xl:text-xs
+                    3xl:px-6   3xl:py-2    3xl:text-sm
                 ">
                     Portals
                 </button>

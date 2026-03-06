@@ -410,7 +410,7 @@ const Header = () => {
     }
 
     return (
-        <header className={`sticky top-0 z-[100] bg-[#F8FAFC] border-b border-gray-200 transition-all duration-500 ${scrolled ? 'shadow-lg' : ''}`}>
+        <header className={`relative bg-[#F8FAFC] border-b border-gray-200 transition-all duration-500 ${scrolled ? 'shadow-lg' : ''}`}>
 
             {/* ── Main padding div ── */}
             <div className="

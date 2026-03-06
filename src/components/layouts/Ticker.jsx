@@ -176,7 +176,7 @@ import { ANNOUNCEMENTS } from '../../data/navData';
 export default function Ticker() {
     return (
         <div
-            className="relative z-[100] overflow-hidden flex items-center viva-font h-[34px] sm:h-[36px] md:h-[38px] lg:h-[38px]"
+            className="overflow-hidden flex items-center viva-font h-[34px] sm:h-[36px] md:h-[38px] lg:h-[38px]"
             style={{
                 background: '#F1F5F9',
                 boxShadow: '0 1px 6px rgba(0,0,0,0.08)'
@@ -236,6 +236,7 @@ export default function Ticker() {
                                 className="
                                     notice-text transition-colors duration-300
                                     group-hover:text-[var(--viva-gold)]
+                                    relative z-1000
                                     px-2
                                     sm:px-3
                                     md:px-4

@@ -127,7 +127,6 @@ const Hero = () => {
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                     objectPosition: 'center center',
-                    // Mobile वर building center दिसेल
                 }}
             />
 

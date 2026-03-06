@@ -451,10 +451,17 @@ const Header = () => {
                 <ul className="flex flex-col px-6 sm:px-8 gap-5 sm:gap-6 mt-2 sm:mt-4">
                     {NAV_LINKS.map((link, i) => (
                         <li key={i}>
-                            <a href={link.href} onClick={(e) => handleMobileNav(e, link.href)}
-                                className="text-white text-base sm:text-lg font-medium hover:text-[var(--viva-gold)] transition">
-                                {link.label}
-                            </a>
+                            {link.href.startsWith('/#') ? (
+                                <a href={link.href} onClick={(e) => handleMobileNav(e, link.href)}
+                                    className="text-white text-base sm:text-lg font-medium hover:text-[var(--viva-gold)] transition">
+                                    {link.label}
+                                </a>
+                            ) : (
+                                <Link to={link.href} onClick={() => setMobileMenuOpen(false)}
+                                    className="text-white text-base sm:text-lg font-medium hover:text-[var(--viva-gold)] transition">
+                                    {link.label}
+                                </Link>
+                            )}
                         </li>
                     ))}
                 </ul>

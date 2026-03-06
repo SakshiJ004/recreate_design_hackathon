@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from "react"
+import { Link } from "react-router-dom"
 
 const NAV_LINKS = [
     { label: "About Us", href: "/#about" },
@@ -107,13 +108,22 @@ const Navbar = ({ visible = true }) => {
                     ">
                         {NAV_LINKS.map((link, i) => (
                             <li key={i} className="whitespace-nowrap">
-                                <a
-                                    href={link.href}
-                                    onClick={(e) => handleScroll(e, link.href)}
-                                    className="hover:text-[var(--viva-gold)] transition-colors duration-200"
-                                >
-                                    {link.label}
-                                </a>
+                                {link.href.startsWith('/#') ? (
+                                    <a
+                                        href={link.href}
+                                        onClick={(e) => handleScroll(e, link.href)}
+                                        className="hover:text-[var(--viva-gold)] transition-colors duration-200"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        to={link.href}
+                                        className="hover:text-[var(--viva-gold)] transition-colors duration-200"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>

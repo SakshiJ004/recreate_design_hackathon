@@ -805,19 +805,19 @@ const CampusLife = () => {
             <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 box-border">
 
                 {/* ── Section header ── */}
-                <div className="mb-9">
-                    <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#C8102E] mb-2.5 flex items-center gap-2">
+                <div className="pb-8">
+                    <p className="text-[8px] sm:text-[xs] xl:text-[12px] font-extrabold tracking-[0.25em] uppercase text-[#C8102E] mb-2.5 flex items-center gap-2">
                         <span className="w-6 h-0.5 bg-[#C8102E] inline-block shrink-0" />
                         Campus Life
                     </p>
                     {/* Original: clamp(36px, 4vw, 52px) → sm:36 md:40 lg:44 xl:48 2xl:52 */}
-                    <h2 className="text-[36px] md:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[52px] font-black text-[#0F1C3D] leading-[1.1] mt-2">
+                    <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-black text-[#0F1C3D] leading-[1.1]">
                         Life at Viva.
                     </h2>
                 </div>
 
                 {/* ── Tabs ── */}
-                <div className="flex gap-0 border-b-2 border-gray-200 mb-10 overflow-x-auto">
+                <div className="flex gap-0 border-b-2 border-gray-200 overflow-x-auto">
                     {TABS.map((tab, i) => (
                         <button
                             key={i}

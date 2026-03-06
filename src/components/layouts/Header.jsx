@@ -59,7 +59,7 @@ const Header = () => {
                 px-3   py-1.5
                 md:px-5  md:py-2
                 lg:px-8  lg:py-2.5
-                xl:px-10 xl:py-3
+                xl:px-10 xl:py-2.5
                 2xl:px-12 2xl:py-3
             ">
                 <div className="flex items-center justify-between">
@@ -76,7 +76,7 @@ const Header = () => {
                                     md:h-12
                                     lg:h-14
                                     xl:h-18
-                                    2xl:h-24
+                                    2xl:h-20
                                 "
                             />
                         </a>
@@ -85,8 +85,8 @@ const Header = () => {
                             text-[10px]
                             md:text-lg
                             lg:text-xl
-                            xl:text-3xl
-                            2xl:text-4xl
+                            xl:text-2xl
+                            2xl:text-3xl
                             3xl:text-4xl
                         ">
                             <span className="block text-[var(--viva-navy)]">VIVA</span>

@@ -336,12 +336,12 @@ const Footer = () => {
 
             {/* ── Main Body ── */}
             <div className="bg-[#0D1B35]
-                px-4    py-10
-                sm:px-6  sm:py-12
-                md:px-10 md:py-14
-                lg:px-12 lg:py-16
-                xl:px-16 xl:py-18
-                2xl:px-20 2xl:py-20
+                px-4    py-8
+                sm:px-6  sm:py-10
+                md:px-10 md:py-12
+                lg:px-12 lg:py-14
+                xl:px-16 xl:py-16
+                2xl:px-20 2xl:py-18
             ">
                 {/* 3 columns — stack on mobile/sm, 2-col md, 3-col lg+ */}
                 <div className="grid gap-10
@@ -360,7 +360,7 @@ const Footer = () => {
                             <div className="bg-white rounded-xl flex items-center justify-center flex-shrink-0
                                 w-14 h-14 p-1.5
                                 sm:w-16 sm:h-16 sm:p-2
-                                xl:w-20 xl:h-20 xl:p-2
+                                xl:w-18 xl:h-18 xl:p-1.5
                             ">
                                 <img src={logo} alt="Viva College" className="w-full h-full object-contain" />
                             </div>
@@ -379,7 +379,7 @@ const Footer = () => {
                         </div>
 
                         <p className="text-slate-300 leading-relaxed pl-3 border-l-2 border-yellow-600/60
-                            text-xs sm:text-sm
+                            text-xs sm:text-[12px]
                         ">
                             NAAC Accredited · Est. 2001<br />
                             Affiliated to University of Mumbai
@@ -395,7 +395,7 @@ const Footer = () => {
                                 <div key={i} className="flex items-start gap-2 xl:gap-2.5">
                                     <div className="mt-0.5 flex-shrink-0">{item.icon}</div>
                                     <span className="text-slate-300 leading-relaxed
-                                        text-xs sm:text-xs xl:text-sm
+                                        text-xs sm:text-xs xl:text-[11px]
                                     ">{item.text}</span>
                                 </div>
                             ))}
@@ -405,19 +405,19 @@ const Footer = () => {
                     {/* ── COL 2 — Useful Links ── */}
                     <div>
                         <p className="text-white font-extrabold tracking-[0.2em] uppercase
-                            text-xs sm:text-sm
+                            text-xs sm:text-[14px]
                         ">
                             Useful Links
                         </p>
                         <div className="w-5 h-0.5 bg-red-600 mt-1 mb-4 xl:mb-6" />
 
-                        <div className="grid grid-cols-2 gap-x-4
+                        <div className="pt-6 grid grid-cols-2 gap-x-4
                             gap-y-3 sm:gap-y-3.5 xl:gap-y-4
                         ">
                             {USEFUL_LINKS.map((link, i) => (
                                 <a key={i} href={link.href} target="_blank" rel="noopener noreferrer"
                                     className="text-slate-300 hover:text-white transition-colors duration-200 leading-tight hover:translate-x-0.5 inline-block
-                                        text-[11px] sm:text-xs xl:text-sm
+                                        text-[11px] sm:text-xs xl:text-[12px]
                                     ">
                                     {link.label}
                                 </a>
@@ -430,12 +430,12 @@ const Footer = () => {
                     <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-1">
                         <div>
                             <p className="text-white font-extrabold tracking-[0.2em] uppercase mb-1.5
-                                text-xs sm:text-sm
+                                text-xs sm:text-[14px]
                             ">
                                 Connect With Us
                             </p>
                             <div className="w-5 h-0.5 bg-red-600 mb-4 xl:mb-5" />
-                            <div className="flex gap-3 sm:gap-4 xl:gap-6 flex-wrap">
+                            <div className="pt-8 flex gap-3 sm:gap-4 xl:gap-4 flex-wrap">
                                 {SOCIALS.map((s, i) => <SocialBtn key={i} s={s} />)}
                             </div>
                         </div>
@@ -443,26 +443,26 @@ const Footer = () => {
                 </div>
 
                 {/* ── Sister Institutes ── */}
-                <div className="mt-8 sm:mt-10 xl:mt-12 pt-8 xl:pt-10"
+                <div className="mt-8 sm:mt-10 xl:mt-12 pt-8 xl:pt-8"
                     style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
 
                     <p className="text-center font-bold tracking-[0.3em] uppercase text-slate-400
-                        text-[9px] sm:text-[10px] xl:text-xs
-                        mb-5 sm:mb-6 xl:mb-8
+                        text-[9px] sm:text-[10px] xl:text-[10px]
+                        mb-5 sm:mb-6 xl:pb-6
                     ">
                         Late Shri Vishnu Waman Thakur Charitable Trust · Sister Institutes
                     </p>
 
                     {/* Wrap nicely on all screens */}
                     <div className="flex items-stretch justify-center flex-wrap
-                        gap-2 sm:gap-2.5 xl:gap-3
+                        gap-2 sm:gap-2.5 xl:gap-2
                     ">
                         {SISTER_INSTITUTES.map((inst, i) => (
                             <a key={i} href={inst.href} target="_blank" rel="noopener noreferrer"
                                 className="group flex items-center gap-2 xl:gap-3 rounded-2xl transition-all duration-250 hover:-translate-y-0.5
-                                    px-3 py-3
-                                    sm:px-4 sm:py-3.5
-                                    xl:px-6 xl:py-4
+                                    px-2 py-2
+                                    sm:px-3 sm:py-2
+                                    xl:px-4 xl:py-2.5
                                 "
                                 style={{
                                     background: 'rgba(255,255,255,0.03)',
@@ -507,11 +507,11 @@ const Footer = () => {
                 sm:px-6  sm:py-3.5
                 md:px-10
                 lg:px-12
-                xl:px-16 xl:py-4
+                xl:px-16 xl:py-3
                 2xl:px-20
             ">
                 <p className="text-slate-400
-                    text-[10px] sm:text-xs xl:text-sm
+                    text-[10px] sm:text-xs xl:text-[12px]
                 ">
                     © 2026 Viva College of Arts, Commerce & Science. All Rights Reserved.
                 </p>

@@ -312,7 +312,7 @@ const Placements = () => {
     return (
         <section
             ref={sectionRef}
-            className="bg-[#F8FAFC] py-16 sm:py-20 lg:py-[88px] w-full box-border overflow-hidden"
+            className="bg-[#F8FAFC] py-16 sm:py-18 lg:py-20 w-full box-border overflow-hidden"
             style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
         >
             {/* ── Section Header ── */}

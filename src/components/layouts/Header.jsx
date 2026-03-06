@@ -283,7 +283,7 @@ const Header = () => {
                                 alt="viva-logo"
                                 className="
                                 w-auto object-contain
-                                h-8
+                                h-10
                                 sm:h-12
                                 md:h-14
                                 lg:h-16
@@ -295,10 +295,10 @@ const Header = () => {
                         </a>
                         <div className="
                         leading-none tracking-wide font-extrabold
-                        text-[9px]
-                        sm:text-[10px]
+                        text-[10px]
+                        sm:text-[12px]
                         md:text-base
-                        lg:text-xl
+                        lg:text-lg
                         xl:text-2xl
                         2xl:text-3xl
                         3xl:text-4xl

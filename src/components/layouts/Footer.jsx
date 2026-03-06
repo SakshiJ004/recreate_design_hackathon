@@ -23,10 +23,10 @@ const USEFUL_LINKS = [
 ]
 
 const SOCIALS = [
-    { icon: <IconFacebook />, label: 'Facebook', href: '#', hoverBg: '#1877F2' },
-    { icon: <IconInstagram />, label: 'Instagram', href: '#', hoverBg: '#E1306C' },
-    { icon: <IconYoutube />, label: 'YouTube', href: '#', hoverBg: '#FF0000' },
-    { icon: <IconLinkedin />, label: 'LinkedIn', href: '#', hoverBg: '#0A66C2' },
+    { icon: <IconFacebook />, label: 'Facebook', href: 'https://www.facebook.com/VIVACOLLEGEACS', hoverBg: '#1877F2' },
+    { icon: <IconInstagram />, label: 'Instagram', href: 'https://www.instagram.com/vivacollege_official?igsh=MWoyandoZmo1cTlncA==', hoverBg: '#E1306C' },
+    { icon: <IconYoutube />, label: 'YouTube', href: 'https://www.youtube.com/@newvivacollege', hoverBg: '#FF0000' },
+    { icon: <IconLinkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/company/viva-college-of-arts-commerce-and-science/', hoverBg: '#0A66C2' },
 ]
 
 const SISTER_INSTITUTES = [

@@ -525,18 +525,18 @@ const Programmes = () => {
                         <div className="
                             px-4 py-4
                             xl:px-6 xl:py-5
-                            2xl:px-8 2xl:py-6
+                            2xl:px-8 2xl:py-4
                             border-b border-white/10
                         ">
                             <p className="text-white/60 font-bold tracking-[0.25em] uppercase pb-3
-                                text-[9px] xl:text-[10px] 2xl:text-xs
+                                text-[9px] xl:text-[10px] 2xl:text-[11px]
                             ">Programme Level</p>
                             <div className="flex gap-2">
                                 {["UG", "PG"].map((l) => (
                                     <button key={l} onClick={() => handleLevel(l)}
                                         className={`flex-1 rounded-xl font-extrabold transition-all duration-300
                                             py-2 text-xs
-                                            xl:py-2.5 xl:text-sm
+                                            xl:py-2 xl:text-[12px]
                                             ${level === l
                                                 ? "bg-white text-[var(--viva-navy)] shadow-md"
                                                 : "bg-white/10 text-white/50 hover:bg-white/15 hover:text-white/80"
@@ -557,15 +557,15 @@ const Programmes = () => {
                             2xl:px-8 2xl:py-6
                             border-b border-white/10
                         ">
-                            <p className="text-white/60 font-bold tracking-[0.25em] uppercase mb-2 xl:mb-3
-                                text-[9px] xl:text-[10px] 2xl:text-xs
+                            <p className="text-white/60 font-bold tracking-[0.25em] uppercase pb-3 xl:mb-3
+                                text-[9px] xl:text-[10px] 2xl:text-[12px]
                             ">Faculty / Stream</p>
                             <div className="flex flex-col gap-1.5 xl:gap-2">
                                 {Object.keys(programmes[level]).map((s) => (
                                     <button key={s} onClick={() => handleStream(s)}
                                         className={`flex items-center gap-2 xl:gap-3 rounded-xl font-bold transition-all duration-300 border-l-4
                                             px-3 py-2 text-xs
-                                            xl:px-4 xl:py-2.5 xl:text-sm
+                                            xl:px-4 xl:py-2.5 xl:text-[12px]
                                             ${stream === s
                                                 ? `${streamConfig[s].bg} text-white border-white`
                                                 : "bg-white/5 text-white/70 border-transparent hover:bg-white/15 hover:text-white"
@@ -573,7 +573,7 @@ const Programmes = () => {
                                         <span>{streamConfig[s].icon}</span>
                                         <span>{s}</span>
                                         <span className={`ml-auto rounded-full font-bold
-                                            text-[9px] xl:text-xs px-1.5 py-0.5
+                                            text-[9px] xl:text-xs px-1.5 py-1
                                             ${stream === s ? "bg-white/20 text-white" : "bg-white/10 text-white/30"}
                                         `}>
                                             {programmes[level][s].length}
@@ -585,7 +585,7 @@ const Programmes = () => {
 
                         {/* Info */}
                         <div className="px-4 xl:px-6 2xl:px-8 py-4 xl:py-5 mt-auto">
-                            <p className="text-white/50 leading-relaxed text-[9px] xl:text-[10px] 2xl:text-xs">
+                            <p className="text-white/50 leading-relaxed text-[9px] xl:text-[10px] 2xl:text-[12px">
                                 {level === "UG" ? "Eligibility: 10+2 pass • Duration: 3 Years" : "Eligibility: Graduation • Duration: 2 Years"}
                             </p>
                         </div>
@@ -596,9 +596,9 @@ const Programmes = () => {
 
                         {/* Right header */}
                         <div className={`bg-gradient-to-r ${c.gradient} flex items-center justify-between
-                            px-6 py-4
-                            xl:px-8 xl:py-5
-                            2xl:px-10 2xl:py-4
+                            px-6 py-3
+                            xl:px-8 xl:py-4
+                            2xl:px-10 2xl:py-2
                         `}>
                             <div>
                                 <p className="text-white/50 font-bold tracking-[0.2em] uppercase
@@ -607,7 +607,7 @@ const Programmes = () => {
                                     {level} • Faculty of {stream}
                                 </p>
                                 <h3 className="text-white font-extrabold mt-1
-                                    text-base lg:text-lg xl:text-xl 2xl:text-[24px]
+                                    text-base lg:text-lg xl:text-xl 2xl:text-[22px]
                                 ">
                                     {currentCourses.length} Programmes
                                 </h3>
@@ -632,8 +632,8 @@ const Programmes = () => {
                                 >
                                     <div className={`${c.light} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200
                                         w-9 h-9
-                                        xl:w-10 xl:h-10
-                                        2xl:w-11 2xl:h-11
+                                        xl:w-9 xl:h-6
+                                        2xl:w-10 2xl:h-8
                                     `}>
                                         {course.icon}
                                     </div>
@@ -645,7 +645,7 @@ const Programmes = () => {
                                             {course.name}
                                         </h4>
                                         <p className="text-gray-400 mt-0.5
-                                            text-[10px] xl:text-xs 2xl:text-xs
+                                            text-[10px] xl:text-xs 2xl:text-[10px]
                                         ">{course.duration}</p>
                                     </div>
                                     <div className={`rounded-full ${c.light} flex items-center justify-center flex-shrink-0
@@ -665,7 +665,7 @@ const Programmes = () => {
 
                 {/* Bottom CTA */}
                 <div className="text-center
-                    pt-6 sm:pt-8 lg:pt-10 xl:pt-10
+                    pt-6 sm:pt-8 lg:pt-10 xl:pt-8
                 ">
                     <p className="text-gray-400 pb-3
                         text-[11px] sm:text-xs xl:text-sm

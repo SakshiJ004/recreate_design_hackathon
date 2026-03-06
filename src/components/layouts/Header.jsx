@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../../assets/images/viva-logo.png'
 import Navbar from './Navbar'
+import { Link } from 'react-router-dom'
 
 const NAV_LINKS = [
     { label: "About Us", href: "/#about" },

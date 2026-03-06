@@ -475,10 +475,10 @@ const Header = () => {
                         <p className="text-white/40 text-[10px] font-bold tracking-widest uppercase mb-3">Portals</p>
                         <div className="flex flex-col gap-1">
                             {[
-                                { label: "Student Login", href: "https://vivacollege.org/student-login" },
-                                { label: "Staff Login", href: "https://vivacollege.org/staff-login" },
+                                { label: "Student Login", href: "http://vivacollege.in/student/" },
+                                { label: "Staff Login", href: "http://vivacollege.in/staff/" },
                                 { label: "Student EDBA Login", href: "https://app.edba.io/login" },
-                                { label: "Inventory Login", href: "https://vivacollege.org/inventory-login" },
+                                { label: "Inventory Login", href: "https://vivacollege.in/inventory/" },
                             ].map((p, i) => (
                                 <a key={i} href={p.href} target="_blank" rel="noopener noreferrer"
                                     className="flex items-center gap-2 py-2 text-white/70 text-sm font-medium hover:text-[var(--viva-gold)] transition">

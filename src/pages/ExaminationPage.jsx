@@ -570,10 +570,10 @@ const timetableData = {
 
 // ── Results data ──
 const resultsLinks = [
-    { title: "SY / TY Semester Results", desc: "Check your latest semester results on Mumbai University portal", href: "https://mu.ac.in/examinations/results", icon: "📊" },
-    { title: "ATKT Results", desc: "Allowed To Keep Terms exam results", href: "https://mu.ac.in/examinations/results", icon: "📋" },
-    { title: "Revaluation / Photocopy", desc: "Apply for revaluation or photocopy of answer sheet", href: "https://mu.ac.in/examinations/revaluation", icon: "🔍" },
-    { title: "Mark Verification", desc: "Online mark verification for current students", href: "https://mu.ac.in/examinations/verification", icon: "✅" },
+    { title: "SY / TY Semester Results", desc: "Check your latest semester results on Mumbai University portal", href: "https://www.mu.ac.in/", icon: "📊" },
+    { title: "ATKT Results", desc: "Allowed To Keep Terms exam results", href: "https://www.mu.ac.in/", icon: "📋" },
+    { title: "Revaluation / Photocopy", desc: "Apply for revaluation or photocopy of answer sheet", href: "https://www.mu.ac.in/", icon: "🔍" },
+    { title: "Mark Verification", desc: "Online mark verification for current students", href: "https://www.mu.ac.in/", icon: "✅" },
 ]
 
 // ── ATKT data ──

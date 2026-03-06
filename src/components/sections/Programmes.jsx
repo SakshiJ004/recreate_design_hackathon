@@ -370,7 +370,7 @@ const Programmes = () => {
             ">
 
                 {/* Header */}
-                <div className="pb-5 sm:pb-6 lg:pb-8 xl:pb-10">
+                <div className="pb-5 sm:pb-6 lg:pb-8 xl:pb-8">
                     <span className="inline-flex items-center gap-2 font-bold tracking-[0.3em] uppercase text-[var(--viva-red)]
                         text-[10px] sm:text-[10px] md:text-xs
                     ">
@@ -665,7 +665,7 @@ const Programmes = () => {
 
                 {/* Bottom CTA */}
                 <div className="text-center
-                    pt-6 sm:pt-8 lg:pt-10 xl:pt-12
+                    pt-6 sm:pt-8 lg:pt-10 xl:pt-10
                 ">
                     <p className="text-gray-400 pb-3
                         text-[11px] sm:text-xs xl:text-sm

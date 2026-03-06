@@ -61,7 +61,7 @@ const Navbar = ({ visible = true }) => {
     hidden xl:block absolute left-1/2 z-30
     transition-all duration-500
     -translate-x-[42%] bottom-[-22px] w-[82%]
-    2xl:-translate-x-[40%] 2xl:bottom-[-24px] 2xl:w-[75%]
+    2xl:-translate-x-[37%] 2xl:bottom-[-24px] 2xl:w-[75%]
     3xl:-translate-x-[38%] 3xl:bottom-[-30px] 3xl:w-[70%]
     ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
 `}>

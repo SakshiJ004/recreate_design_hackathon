@@ -591,7 +591,7 @@ const Alumni = () => {
                 </p>
                 <div className="flex items-end justify-between flex-wrap gap-3 sm:gap-4">
                     <h2 className="font-black text-slate-900 leading-tight
-                        text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl
+                        text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl
                     ">
                         Viva Alumni<br />
                         <span className="text-transparent" style={{ WebkitTextStroke: '2px #C8102E' }}>
@@ -599,7 +599,7 @@ const Alumni = () => {
                         </span>
                     </h2>
                     <p className="text-gray-500 leading-relaxed
-                        text-xs sm:text-xs md:text-sm
+                        text-xs sm:text-xs md:text-[12px]
                         max-w-[200px] sm:max-w-xs md:max-w-sm
                     ">
                         A thriving community of 7,000+ graduates across 20+ countries — staying connected, giving back, and growing together.

@@ -636,7 +636,7 @@ const EventsNotices = () => {
                                 key={i}
                                 onMouseEnter={() => setHoveredEvent(i)}
                                 onMouseLeave={() => setHoveredEvent(null)}
-                                className="flex gap-4 items-start px-4 sm:px-5 py-4 sm:py-[18px] rounded-2xl cursor-pointer"
+                                className="flex gap-4 items-start px-4 sm:px-5 py-4 sm:py-3 rounded-2xl cursor-pointer"
                                 style={{
                                     border: '1px solid',
                                     borderColor: hoveredEvent === i ? '#0F1C3D' : '#F3F4F6',
@@ -759,7 +759,7 @@ const EventsNotices = () => {
                                     key={`${activeFilter}-${i}`}
                                     onMouseEnter={() => setHoveredNotice(i)}
                                     onMouseLeave={() => setHoveredNotice(null)}
-                                    className="flex gap-3.5 items-start px-3 sm:px-4 py-3 sm:py-3 rounded-xl cursor-pointer"
+                                    className="flex gap-3.5 items-start px-3 sm:px-4 py-3 sm:py-2.5 rounded-xl cursor-pointer"
                                     style={{
                                         border: '1px solid #F3F4F6',
                                         borderLeft: `3px solid ${ps.border}`,

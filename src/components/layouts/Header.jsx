@@ -284,10 +284,10 @@ const Header = () => {
                                 className="
                                 w-auto object-contain
                                 h-8
-                                sm:h-9
-                                md:h-11
-                                lg:h-13
-                                xl:h-16
+                                sm:h-12
+                                md:h-14
+                                lg:h-16
+                                xl:h-18
                                 2xl:h-20
                                 3xl:h-28
                             "

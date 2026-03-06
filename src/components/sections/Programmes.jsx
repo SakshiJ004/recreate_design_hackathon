@@ -486,7 +486,7 @@ const Programmes = () => {
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <h4 className={`font-extrabold leading-snug transition-colors duration-200
-                                        text-[11px] sm:text-xs md:text-sm
+                                        text-[11px] sm:text-xs md:text-sm 
                                         ${expandedCourse === i ? c.text : "text-[var(--viva-navy)]"}
                                     `}>
                                         {course.name}
@@ -598,16 +598,16 @@ const Programmes = () => {
                         <div className={`bg-gradient-to-r ${c.gradient} flex items-center justify-between
                             px-6 py-4
                             xl:px-8 xl:py-5
-                            2xl:px-10 2xl:py-6
+                            2xl:px-10 2xl:py-4
                         `}>
                             <div>
                                 <p className="text-white/50 font-bold tracking-[0.2em] uppercase
-                                    text-[9px] xl:text-[10px] 2xl:text-xs
+                                    text-[9px] xl:text-[10px] 2xl:text-[10px]
                                 ">
                                     {level} • Faculty of {stream}
                                 </p>
                                 <h3 className="text-white font-extrabold mt-1
-                                    text-base lg:text-lg xl:text-xl 2xl:text-2xl
+                                    text-base lg:text-lg xl:text-xl 2xl:text-[24px]
                                 ">
                                     {currentCourses.length} Programmes
                                 </h3>
@@ -626,7 +626,7 @@ const Programmes = () => {
                                     className={`w-full flex items-center text-left transition-all duration-200 group hover:bg-gray-50
                                         gap-3 px-5 py-3
                                         xl:gap-4 xl:px-7 xl:py-3.5
-                                        2xl:px-8 2xl:py-4
+                                        2xl:px-8 2xl:py-3
                                         ${expandedCourse === i ? "bg-gray-50" : ""}
                                     `}
                                 >
@@ -639,7 +639,7 @@ const Programmes = () => {
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <h4 className={`font-extrabold leading-snug transition-colors duration-200
-                                            text-xs lg:text-xs xl:text-sm 2xl:text-sm
+                                            text-xs lg:text-xs xl:text-sm 2xl:text-[14px]
                                             ${expandedCourse === i ? c.text : "text-[var(--viva-navy)]"}
                                         `}>
                                             {course.name}

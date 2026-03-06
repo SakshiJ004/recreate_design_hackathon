@@ -61,7 +61,7 @@ const Navbar = ({ visible = true }) => {
         if (buttonRef.current) {
             const rect = buttonRef.current.getBoundingClientRect()
             setPos({
-                top: rect.bottom + 4, // gap कमी केला — 8 → 4
+                top: rect.bottom + 4, 
                 right: window.innerWidth - rect.right,
             })
         }
@@ -69,7 +69,6 @@ const Navbar = ({ visible = true }) => {
     }
 
     const closeDropdown = () => {
-        // 150ms delay — mouse gap cross करताना बंद होत नाही
         closeTimer.current = setTimeout(() => {
             setPortalOpen(false)
         }, 150)
@@ -90,7 +89,7 @@ const Navbar = ({ visible = true }) => {
                 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
             `}>
                 <div className="
-                    bg-gradient-to-r from-[#1F2F5E] to-[#5973b1]
+                    bg-gradient-to-r from-[#283763] to-[#738ece]
                     text-white shadow-lg nav-diagonal
                     flex items-center justify-between overflow-visible
                     px-6 py-2
@@ -211,12 +210,6 @@ const Navbar = ({ visible = true }) => {
                                     </svg>
                                 </a>
                             ))}
-                        </div>
-
-                        {/* Footer */}
-                        <div className="mx-2 mb-2 p-2.5 bg-gray-50 rounded-xl flex items-center justify-between">
-                            <p className="text-[10px] text-gray-400">Viva College Portals</p>
-                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                         </div>
                     </div >
                 )

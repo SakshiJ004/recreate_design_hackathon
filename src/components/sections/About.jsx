@@ -64,7 +64,6 @@ const About = () => {
                         {/* ── Left ── */}
                         <div className="xl:col-span-2">
 
-                            {/* Tag */}
                             <span className="inline-flex items-center gap-2 font-bold tracking-[0.3em] uppercase text-[var(--viva-red)]
                                 text-[10px] sm:text-xs
                             ">
@@ -86,12 +85,10 @@ const About = () => {
                                 <span className="text-[var(--viva-red)]">Since 1988.</span>
                             </h2>
 
-                            {/* Gold bar */}
                             <div className="w-12 h-1 bg-[var(--viva-gold)] rounded-full
                                 mt-3 sm:mt-4 xl:mt-5
                             " />
 
-                            {/* Paragraph */}
                             <p className="
                                 text-gray-500 leading-[1.9]
                                 mt-4 text-xs
@@ -200,7 +197,6 @@ const About = () => {
                                     ">Our Journey</span>
                                 </div>
 
-                                {/* Desktop/Tablet — horizontal */}
                                 <div className="hidden sm:flex relative items-center justify-between top-3">
                                     <div className="absolute left-8 right-8 top-6 h-[2px] bg-white/20
                                         md:left-10 md:right-10 md:top-7
@@ -222,9 +218,7 @@ const About = () => {
                                         </div>
                                     ))}
                                 </div>
-
-                                {/* Mobile — vertical */}
-                                <div className="flex sm:hidden flex-col gap-4 relative">
+                                <div className="pt-4 flex sm:hidden flex-col gap-4 relative">
                                     <div className="absolute left-5 top-0 bottom-0 w-[2px] bg-white/20" />
                                     {milestones.map((m, i) => (
                                         <div key={i} className="flex items-start gap-4 relative">

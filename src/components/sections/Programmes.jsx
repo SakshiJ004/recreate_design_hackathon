@@ -457,16 +457,18 @@ const Programmes = () => {
                     </div>
 
                     {/* Course header */}
-                    <div className={`bg-gradient-to-r ${c.gradient} rounded-t-2xl px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between`}>
-                        <div>
-                            <p className="text-white/50 font-bold tracking-[0.2em] uppercase text-[9px] sm:text-[10px]">
-                                {level} • Faculty of {stream}
-                            </p>
-                            <h3 className="text-white font-extrabold mt-0.5 text-sm sm:text-base md:text-lg">
-                                {currentCourses.length} Programmes
-                            </h3>
+                    <div className="pt-4">
+                        <div className={`bg-gradient-to-r ${c.gradient} rounded-t-2xl px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between`}>
+                            <div>
+                                <p className="text-white/50 font-bold tracking-[0.2em] uppercase text-[9px] sm:text-[10px]">
+                                    {level} • Faculty of {stream}
+                                </p>
+                                <h3 className="text-white font-extrabold mt-0.5 text-sm sm:text-base md:text-lg">
+                                    {currentCourses.length} Programmes
+                                </h3>
+                            </div>
+                            <div className="font-black text-white/10 select-none text-4xl sm:text-5xl">{stream[0]}</div>
                         </div>
-                        <div className="font-black text-white/10 select-none text-4xl sm:text-5xl">{stream[0]}</div>
                     </div>
 
                     {/* Course list */}

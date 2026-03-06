@@ -66,7 +66,6 @@ const Footer = () => {
                 xl:px-16 xl:py-16
                 2xl:px-20 2xl:py-18
             ">
-                {/* 3 columns — stack on mobile/sm, 2-col md, 3-col lg+ */}
                 <div className="grid gap-10
                     grid-cols-1
                     md:grid-cols-2  md:gap-10
@@ -74,8 +73,6 @@ const Footer = () => {
                     xl:gap-14
                     2xl:gap-16
                 ">
-
-                    {/* ── COL 1 — Logo + Contact ── */}
                     <div className="flex flex-col gap-4 xl:gap-5">
 
                         {/* Logo */}
@@ -125,7 +122,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* ── COL 2 — Useful Links ── */}
                     <div>
                         <p className="text-white font-extrabold tracking-[0.2em] uppercase
                             text-xs sm:text-[14px]
@@ -148,8 +144,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* ── COL 3 — Socials ── */}
-                    {/* On md: spans full width below col1+col2, on lg: own column */}
                     <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-1">
                         <div>
                             <p className="text-white font-extrabold tracking-[0.2em] uppercase mb-1.5
@@ -176,7 +170,6 @@ const Footer = () => {
                         Late Shri Vishnu Waman Thakur Charitable Trust · Sister Institutes
                     </p>
 
-                    {/* Wrap nicely on all screens */}
                     <div className="flex items-stretch justify-center flex-wrap
                         gap-2 sm:gap-2.5 xl:gap-2
                     ">

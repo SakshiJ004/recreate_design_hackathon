@@ -295,8 +295,8 @@ const Header = () => {
                         </a>
                         <div className="
                         leading-none tracking-wide font-extrabold
-                        text-[10px]
-                        sm:text-[12px]
+                        text-[12px]
+                        sm:text-[14px]
                         md:text-base
                         lg:text-lg
                         xl:text-2xl
@@ -461,10 +461,27 @@ const Header = () => {
                 <div className="px-6 sm:px-8 mt-6 sm:mt-8 flex flex-col gap-3 sm:gap-4">
                     <button className="md:hidden w-full py-2.5 sm:py-3 rounded-full font-bold text-white text-sm sm:text-base"
                         style={{ background: 'var(--viva-red)' }}>Apply Now</button>
-                    <button className="w-full py-2.5 sm:py-3 rounded-full font-bold text-[var(--viva-navy)] bg-white text-sm sm:text-base hover:bg-[var(--viva-gold)] hover:text-white transition-all duration-300">
-                        Portals
-                    </button>
+
+                    {/* Portals section */}
+                    <div className="border-t border-white/10 pt-4">
+                        <p className="text-white/40 text-[10px] font-bold tracking-widest uppercase mb-3">Portals</p>
+                        <div className="flex flex-col gap-1">
+                            {[
+                                { label: "Student Login", href: "https://vivacollege.org/student-login" },
+                                { label: "Staff Login", href: "https://vivacollege.org/staff-login" },
+                                { label: "Student EDBA Login", href: "https://app.edba.io/login" },
+                                { label: "Inventory Login", href: "https://vivacollege.org/inventory-login" },
+                            ].map((p, i) => (
+                                <a key={i} href={p.href} target="_blank" rel="noopener noreferrer"
+                                    className="flex items-center gap-2 py-2 text-white/70 text-sm font-medium hover:text-[var(--viva-gold)] transition">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--viva-gold)] flex-shrink-0" />
+                                    {p.label}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
             {mobileMenuOpen && <div className="xl:hidden fixed inset-0 bg-black/40 z-40" onClick={() => setMobileMenuOpen(false)} />}

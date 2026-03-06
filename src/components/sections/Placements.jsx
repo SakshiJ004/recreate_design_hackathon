@@ -33,205 +33,9 @@
 //     { name: 'Saraswat Bank', color: '#003087' },
 // ]
 
-// // RecruiterCarousel replace कर हे ने:
-
 // const ROW1 = RECRUITERS.slice(0, 12)
 // const ROW2 = RECRUITERS.slice(11)
 
-// const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
-//     const doubled = [...items, ...items, ...items]
-//     const animName = direction === 'left' ? 'scrollLeft' : 'scrollRight'
-
-//     return (
-//         <div style={{ position: 'relative', overflow: 'hidden' }}>
-//             <div style={{
-//                 position: 'absolute', left: 0, top: 0, bottom: 0, width: 130,
-//                 background: 'linear-gradient(to right, #fff, transparent)',
-//                 zIndex: 2, pointerEvents: 'none',
-//             }} />
-//             <div style={{
-//                 position: 'absolute', right: 0, top: 0, bottom: 0, width: 120,
-//                 background: 'linear-gradient(to left, #fff, transparent)',
-//                 zIndex: 2, pointerEvents: 'none',
-//             }} />
-
-//             <div
-//                 onMouseEnter={() => setPaused(true)}
-//                 onMouseLeave={() => setPaused(false)}
-//                 style={{
-//                     display: 'flex', gap: 14,
-//                     width: 'max-content',
-//                     animation: `${animName} 35s linear infinite`,
-//                     animationPlayState: paused ? 'paused' : 'running',
-//                 }}
-//             >
-//                 {doubled.map((r, i) => (
-//                     <div key={i}
-//                         style={{
-//                             flexShrink: 0,
-//                             padding: '35px 32px',
-//                             borderRadius: 16,
-//                             border: `1.5px solid ${r.color}25`,
-//                             background: `${r.color}08`,
-//                             minWidth: 180,
-//                             display: 'flex', alignItems: 'center', justifyContent: 'center',
-//                             transition: 'all 0.25s ease',
-//                             cursor: 'default',
-//                         }}
-//                         onMouseEnter={e => {
-//                             e.currentTarget.style.background = r.color
-//                             e.currentTarget.style.borderColor = r.color
-//                             e.currentTarget.style.transform = 'translateY(-4px)'
-//                             e.currentTarget.style.boxShadow = `0 12px 28px ${r.color}35`
-//                             e.currentTarget.querySelector('span').style.color = '#fff'
-//                         }}
-//                         onMouseLeave={e => {
-//                             e.currentTarget.style.background = `${r.color}08`
-//                             e.currentTarget.style.borderColor = `${r.color}25`
-//                             e.currentTarget.style.transform = 'translateY(0)'
-//                             e.currentTarget.style.boxShadow = 'none'
-//                             e.currentTarget.querySelector('span').style.color = r.color
-//                         }}
-//                     >
-//                         <span style={{
-//                             fontSize: 14, fontWeight: 800,
-//                             color: r.color, whiteSpace: 'nowrap',
-//                             transition: 'color 0.25s',
-//                             letterSpacing: '0.02em',
-//                         }}>
-//                             {r.name}
-//                         </span>
-//                     </div>
-//                 ))}
-//             </div>
-//         </div>
-//     )
-// }
-
-// const RecruiterCarousel = ({ paused, setPaused }) => (
-//     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-//         <CarouselRow items={ROW1} direction="left" paused={paused} setPaused={setPaused} />
-//         <CarouselRow items={ROW2} direction="right" paused={paused} setPaused={setPaused} />
-//     </div>
-// )
-
-
-// const Placements = () => {
-//     const [sectionRef, inView] = useInView()
-//     const [paused, setPaused] = useState(false)
-
-//     return (
-//         <section ref={sectionRef} style={{
-//             background: '#F8FAFC',
-//             padding: '88px 0',
-//             fontFamily: "'DM Sans', 'Inter', sans-serif",
-//             width: '100%',
-//             boxSizing: 'border-box',
-//             overflow: 'hidden',
-//         }}>
-//             <style>{`
-//                 @keyframes scrollTrack {
-//                     0%   { transform: translateX(0); }
-//                     100% { transform: translateX(-33.33%); }
-//                 }
-//                 @keyframes fadeUp {
-//                     from { opacity: 0; transform: translateY(20px); }
-//                     to   { opacity: 1; transform: translateY(0); }
-//                 }
-//             `}</style>
-
-//             {/* ── Section Header ── */}
-//             <div style={{
-//                 padding: '0 48px',
-//                 marginBottom: 52,
-//                 opacity: inView ? 1 : 0,
-//                 transform: inView ? 'translateY(0)' : 'translateY(20px)',
-//                 transition: 'all 0.6s ease',
-//             }}>
-//                 <p style={{
-//                     fontSize: 11, fontWeight: 800,
-//                     letterSpacing: '0.25em', textTransform: 'uppercase',
-//                     color: '#C8102E', margin: '0 0 10px',
-//                     display: 'flex', alignItems: 'center', gap: 8,
-//                 }}>
-//                     <span style={{ width: 24, height: 2, background: '#C8102E', display: 'inline-block' }} />
-//                     Placements
-//                 </p>
-//                 <div style={{
-//                     display: 'flex', alignItems: 'flex-end',
-//                     justifyContent: 'space-between',
-//                     flexWrap: 'wrap', gap: 16,
-//                 }}>
-//                     <h2 style={{
-//                         fontSize: 'clamp(32px, 4vw, 48px)',
-//                         fontWeight: 900, color: '#0F1C3D',
-//                         lineHeight: 1.1, margin: 0,
-//                     }}>
-//                         Our Recruiters
-//                     </h2>
-//                     <p style={{
-//                         fontSize: 14, color: '#6B7280',
-//                         maxWidth: 420, margin: 0, lineHeight: 1.6,
-//                     }}>
-//                         50+ top companies visit VIVA College annually for campus recruitment drives across all streams.
-//                     </p>
-//                 </div>
-//             </div>
-
-//             {/* ── Carousel ── */}
-//             <div style={{
-//                 opacity: inView ? 1 : 0,
-//                 transition: 'opacity 0.8s ease 0.2s',
-//             }}>
-//                 <RecruiterCarousel paused={paused} setPaused={setPaused} />
-//             </div>
-
-//         </section>
-//     )
-// }
-
-// export default Placements
-
-
-// import React, { useState, useEffect, useRef } from 'react'
-
-// // ── InView hook ──
-// const useInView = () => {
-//     const ref = useRef(null)
-//     const [inView, setInView] = useState(false)
-//     useEffect(() => {
-//         const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setInView(true) }, { threshold: 0.1 })
-//         if (ref.current) obs.observe(ref.current)
-//         return () => obs.disconnect()
-//     }, [])
-//     return [ref, inView]
-// }
-
-// const RECRUITERS = [
-//     { name: 'TCS', color: '#1D4ED8' },
-//     { name: 'Infosys', color: '#007CC3' },
-//     { name: 'Wipro', color: '#341C6A' },
-//     { name: 'Capgemini', color: '#0070AD' },
-//     { name: 'Amazon', color: '#FF9900' },
-//     { name: 'ICICI Bank', color: '#B02A2A' },
-//     { name: 'HDFC Bank', color: '#004C97' },
-//     { name: 'Tech Mahindra', color: '#E31837' },
-//     { name: 'Airtel', color: '#E40000' },
-//     { name: 'Axis Bank', color: '#97144D' },
-//     { name: 'Ernst & Young', color: '#2E3A59' },
-//     { name: 'KPMG', color: '#00338D' },
-//     { name: 'Bajaj FinServ', color: '#003399' },
-//     { name: 'Deloitte', color: '#5B8C00' },
-//     { name: 'Edelweiss', color: '#E31B23' },
-//     { name: 'Bajaj Allianz', color: '#FF6600' },
-//     { name: 'Birla Sunlife', color: '#E31837' },
-//     { name: 'Saraswat Bank', color: '#003087' },
-// ]
-
-// const ROW1 = RECRUITERS.slice(0, 12)
-// const ROW2 = RECRUITERS.slice(11)
-
-// // ── dynamic color values must stay in style={} ──
 // const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
 //     const doubled = [...items, ...items, ...items]
 //     const animName = direction === 'left' ? 'scrollLeft' : 'scrollRight'
@@ -239,33 +43,31 @@
 //     return (
 //         <div className="relative overflow-hidden">
 //             {/* Left fade */}
-//             <div
-//                 className="absolute left-0 top-0 bottom-0 w-[130px] z-[2] pointer-events-none"
-//                 style={{ background: 'linear-gradient(to right, #fff, transparent)' }}
-//             />
+//             <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 z-10 pointer-events-none"
+//                 style={{ background: 'linear-gradient(to right, #F8FAFC, transparent)' }} />
 //             {/* Right fade */}
-//             <div
-//                 className="absolute right-0 top-0 bottom-0 w-[120px] z-[2] pointer-events-none"
-//                 style={{ background: 'linear-gradient(to left, #fff, transparent)' }}
-//             />
+//             <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 z-10 pointer-events-none"
+//                 style={{ background: 'linear-gradient(to left, #F8FAFC, transparent)' }} />
 
 //             <div
 //                 onMouseEnter={() => setPaused(true)}
 //                 onMouseLeave={() => setPaused(false)}
-//                 className="flex gap-3.5 w-max"
+//                 className="flex"
 //                 style={{
+//                     gap: '10px',
+//                     width: 'max-content',
 //                     animation: `${animName} 35s linear infinite`,
 //                     animationPlayState: paused ? 'paused' : 'running',
 //                 }}
 //             >
 //                 {doubled.map((r, i) => (
-//                     <div
-//                         key={i}
-//                         className="shrink-0 min-w-[180px] flex items-center justify-center rounded-2xl cursor-default px-8 py-[35px]"
+//                     <div key={i}
+//                         className="flex-shrink-0 flex items-center justify-center rounded-2xl cursor-default transition-all duration-300"
 //                         style={{
+//                             padding: '20px 20px',
+//                             minWidth: '120px',
 //                             border: `1.5px solid ${r.color}25`,
 //                             background: `${r.color}08`,
-//                             transition: 'all 0.25s ease',
 //                         }}
 //                         onMouseEnter={e => {
 //                             e.currentTarget.style.background = r.color
@@ -283,11 +85,10 @@
 //                         }}
 //                     >
 //                         <span
-//                             className="text-sm font-extrabold whitespace-nowrap tracking-[0.02em]"
-//                             style={{
-//                                 color: r.color,
-//                                 transition: 'color 0.25s',
-//                             }}
+//                             className="whitespace-nowrap font-extrabold tracking-wide transition-colors duration-300
+//                                 text-xs sm:text-sm
+//                             "
+//                             style={{ color: r.color }}
 //                         >
 //                             {r.name}
 //                         </span>
@@ -299,7 +100,7 @@
 // }
 
 // const RecruiterCarousel = ({ paused, setPaused }) => (
-//     <div className="flex flex-col gap-3.5">
+//     <div className="flex flex-col gap-3 sm:gap-3.5">
 //         <CarouselRow items={ROW1} direction="left" paused={paused} setPaused={setPaused} />
 //         <CarouselRow items={ROW2} direction="right" paused={paused} setPaused={setPaused} />
 //     </div>
@@ -312,29 +113,63 @@
 //     return (
 //         <section
 //             ref={sectionRef}
-//             className="bg-[#F8FAFC] py-16 sm:py-18 lg:py-20 w-full box-border overflow-hidden"
-//             style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
+//             className="bg-[#F8FAFC] w-full overflow-hidden font-['DM_Sans','Inter',sans-serif]
+//                 py-10
+//                 sm:py-12
+//                 md:py-14
+//                 lg:py-16
+//                 xl:py-18
+//                 2xl:py-20
+//             "
 //         >
+
 //             {/* ── Section Header ── */}
 //             <div
-//                 className="px-4 sm:px-6 md:px-8 lg:px-12 pb-10 sm:mb-12 lg:mb-[52px]"
+//                 className="
+//                     px-4     pb-8
+//                     sm:px-6  sm:pb-9
+//                     md:px-10 md:pb-10
+//                     lg:px-14 lg:pb-11
+//                     xl:px-18 xl:pb-12
+//                     2xl:px-22 2xl:pb-12
+//                     transition-all duration-700
+//                 "
 //                 style={{
 //                     opacity: inView ? 1 : 0,
 //                     transform: inView ? 'translateY(0)' : 'translateY(20px)',
 //                     transition: 'all 0.6s ease',
 //                 }}
 //             >
-//                 <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#C8102E] mb-2.5 flex items-center gap-2">
-//                     <span className="w-6 h-0.5 bg-[#C8102E] inline-block" />
+//                 {/* Tag */}
+//                 <p className="flex items-center gap-2 font-extrabold tracking-[0.25em] uppercase text-[var(--viva-red)] mb-2.5
+//                     text-[10px] sm:text-[10px] md:text-[12px]
+//                 ">
+//                     <span className="inline-block h-0.5 bg-[var(--viva-red)] flex-shrink-0
+//                         w-5 sm:w-5 md:w-6
+//                     " />
 //                     Placements
 //                 </p>
 
-//                 <div className="flex items-end justify-between flex-wrap gap-4">
-//                     {/* Original: clamp(32px,4vw,48px) → breakpoints */}
-//                     <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black text-[#0F1C3D] leading-[1.1] m-0">
+//                 {/* Heading row */}
+//                 <div className="flex items-end justify-between flex-wrap
+//                     gap-3 sm:gap-4
+//                 ">
+//                     <h2 className="font-black text-[var(--viva-navy)] leading-[1.1] m-0
+//                         text-2xl
+//                         sm:text-3xl
+//                         md:text-3xl
+//                         lg:text-4xl
+//                         xl:text-4xl
+//                         2xl:text-4xl
+//                     ">
 //                         Our Recruiters
 //                     </h2>
-//                     <p className="text-[12px] text-gray-500 max-w-[420px] m-0 leading-relaxed">
+//                     <p className="text-gray-500 leading-relaxed m-0
+//                         text-xs    max-w-[200px]
+//                         sm:text-xs sm:max-w-xs
+//                         md:text-sm md:max-w-sm
+//                         xl:text-[12px] xl:max-w-md
+//                     ">
 //                         50+ top companies visit VIVA College annually for campus recruitment drives across all streams.
 //                     </p>
 //                 </div>
@@ -342,13 +177,12 @@
 
 //             {/* ── Carousel ── */}
 //             <div
-//                 style={{
-//                     opacity: inView ? 1 : 0,
-//                     transition: 'opacity 0.8s ease 0.2s',
-//                 }}
+//                 className="transition-opacity duration-700 delay-200"
+//                 style={{ opacity: inView ? 1 : 0 }}
 //             >
 //                 <RecruiterCarousel paused={paused} setPaused={setPaused} />
 //             </div>
+
 //         </section>
 //     )
 // }
@@ -358,7 +192,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 
-// ── InView hook ──
 const useInView = () => {
     const ref = useRef(null)
     const [inView, setInView] = useState(false)
@@ -394,60 +227,38 @@ const RECRUITERS = [
 const ROW1 = RECRUITERS.slice(0, 12)
 const ROW2 = RECRUITERS.slice(11)
 
-const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
-    const doubled = [...items, ...items, ...items]
-    const animName = direction === 'left' ? 'scrollLeft' : 'scrollRight'
-
+// ── Mobile: single scrolling row, smaller cards ──
+const MobileCarousel = ({ paused, setPaused }) => {
+    const allItems = [...RECRUITERS, ...RECRUITERS, ...RECRUITERS]
     return (
         <div className="relative overflow-hidden">
-            {/* Left fade */}
-            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 z-10 pointer-events-none"
+            <div className="absolute left-0 top-0 bottom-0 w-10 z-10 pointer-events-none"
                 style={{ background: 'linear-gradient(to right, #F8FAFC, transparent)' }} />
-            {/* Right fade */}
-            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 z-10 pointer-events-none"
+            <div className="absolute right-0 top-0 bottom-0 w-10 z-10 pointer-events-none"
                 style={{ background: 'linear-gradient(to left, #F8FAFC, transparent)' }} />
-
             <div
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
                 className="flex"
                 style={{
-                    gap: '10px',
+                    gap: '8px',
                     width: 'max-content',
-                    animation: `${animName} 35s linear infinite`,
+                    animation: 'scrollLeft 28s linear infinite',
                     animationPlayState: paused ? 'paused' : 'running',
                 }}
             >
-                {doubled.map((r, i) => (
+                {allItems.map((r, i) => (
                     <div key={i}
-                        className="flex-shrink-0 flex items-center justify-center rounded-2xl cursor-default transition-all duration-300"
+                        className="flex-shrink-0 flex items-center justify-center rounded-xl"
                         style={{
-                            padding: '20px 20px',
-                            minWidth: '120px',
+                            padding: '12px 16px',
+                            minWidth: '90px',
                             border: `1.5px solid ${r.color}25`,
                             background: `${r.color}08`,
                         }}
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = r.color
-                            e.currentTarget.style.borderColor = r.color
-                            e.currentTarget.style.transform = 'translateY(-4px)'
-                            e.currentTarget.style.boxShadow = `0 12px 28px ${r.color}35`
-                            e.currentTarget.querySelector('span').style.color = '#fff'
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = `${r.color}08`
-                            e.currentTarget.style.borderColor = `${r.color}25`
-                            e.currentTarget.style.transform = 'translateY(0)'
-                            e.currentTarget.style.boxShadow = 'none'
-                            e.currentTarget.querySelector('span').style.color = r.color
-                        }}
                     >
-                        <span
-                            className="whitespace-nowrap font-extrabold tracking-wide transition-colors duration-300
-                                text-xs sm:text-sm
-                            "
-                            style={{ color: r.color }}
-                        >
+                        <span className="whitespace-nowrap font-extrabold text-[11px] tracking-wide"
+                            style={{ color: r.color }}>
                             {r.name}
                         </span>
                     </div>
@@ -457,12 +268,124 @@ const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
     )
 }
 
-const RecruiterCarousel = ({ paused, setPaused }) => (
-    <div className="flex flex-col gap-3 sm:gap-3.5">
-        <CarouselRow items={ROW1} direction="left" paused={paused} setPaused={setPaused} />
-        <CarouselRow items={ROW2} direction="right" paused={paused} setPaused={setPaused} />
-    </div>
-)
+// ── Tablet: 2 rows, medium cards ──
+const TabletCarousel = ({ paused, setPaused }) => {
+    const row1 = [...ROW1, ...ROW1, ...ROW1]
+    const row2 = [...ROW2, ...ROW2, ...ROW2]
+    return (
+        <div className="flex flex-col gap-2.5">
+            {[{ items: row1, dir: 'scrollLeft' }, { items: row2, dir: 'scrollRight' }].map(({ items, dir }, ri) => (
+                <div key={ri} className="relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-14 z-10 pointer-events-none"
+                        style={{ background: 'linear-gradient(to right, #F8FAFC, transparent)' }} />
+                    <div className="absolute right-0 top-0 bottom-0 w-14 z-10 pointer-events-none"
+                        style={{ background: 'linear-gradient(to left, #F8FAFC, transparent)' }} />
+                    <div
+                        onMouseEnter={() => setPaused(true)}
+                        onMouseLeave={() => setPaused(false)}
+                        className="flex"
+                        style={{
+                            gap: '10px',
+                            width: 'max-content',
+                            animation: `${dir} 32s linear infinite`,
+                            animationPlayState: paused ? 'paused' : 'running',
+                        }}
+                    >
+                        {items.map((r, i) => (
+                            <div key={i}
+                                className="flex-shrink-0 flex items-center justify-center rounded-xl transition-all duration-300 cursor-default"
+                                style={{
+                                    padding: '14px 20px',
+                                    minWidth: '110px',
+                                    border: `1.5px solid ${r.color}25`,
+                                    background: `${r.color}08`,
+                                }}
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = r.color
+                                    e.currentTarget.style.transform = 'translateY(-3px)'
+                                    e.currentTarget.querySelector('span').style.color = '#fff'
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = `${r.color}08`
+                                    e.currentTarget.style.transform = 'translateY(0)'
+                                    e.currentTarget.querySelector('span').style.color = r.color
+                                }}
+                            >
+                                <span className="whitespace-nowrap font-extrabold text-xs tracking-wide transition-colors duration-300"
+                                    style={{ color: r.color }}>
+                                    {r.name}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    )
+}
+
+// ── Desktop lg/xl/2xl: 2 rows, full size cards ──
+const DesktopCarousel = ({ paused, setPaused }) => {
+    const row1 = [...ROW1, ...ROW1, ...ROW1]
+    const row2 = [...ROW2, ...ROW2, ...ROW2]
+    return (
+        <div className="flex flex-col gap-3 lg:gap-3.5">
+            {[{ items: row1, dir: 'scrollLeft' }, { items: row2, dir: 'scrollRight' }].map(({ items, dir }, ri) => (
+                <div key={ri} className="relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 z-10 pointer-events-none
+                        w-24 lg:w-28 xl:w-32 2xl:w-36"
+                        style={{ background: 'linear-gradient(to right, #F8FAFC, transparent)' }} />
+                    <div className="absolute right-0 top-0 bottom-0 z-10 pointer-events-none
+                        w-24 lg:w-28 xl:w-32 2xl:w-36"
+                        style={{ background: 'linear-gradient(to left, #F8FAFC, transparent)' }} />
+                    <div
+                        onMouseEnter={() => setPaused(true)}
+                        onMouseLeave={() => setPaused(false)}
+                        className="flex"
+                        style={{
+                            gap: '12px',
+                            width: 'max-content',
+                            animation: `${dir} 35s linear infinite`,
+                            animationPlayState: paused ? 'paused' : 'running',
+                        }}
+                    >
+                        {items.map((r, i) => (
+                            <div key={i}
+                                className="flex-shrink-0 flex items-center justify-center rounded-2xl transition-all duration-300 cursor-default"
+                                style={{
+                                    padding: '22px 28px',
+                                    minWidth: '140px',
+                                    border: `1.5px solid ${r.color}25`,
+                                    background: `${r.color}08`,
+                                }}
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = r.color
+                                    e.currentTarget.style.borderColor = r.color
+                                    e.currentTarget.style.transform = 'translateY(-4px)'
+                                    e.currentTarget.style.boxShadow = `0 12px 28px ${r.color}35`
+                                    e.currentTarget.querySelector('span').style.color = '#fff'
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = `${r.color}08`
+                                    e.currentTarget.style.borderColor = `${r.color}25`
+                                    e.currentTarget.style.transform = 'translateY(0)'
+                                    e.currentTarget.style.boxShadow = 'none'
+                                    e.currentTarget.querySelector('span').style.color = r.color
+                                }}
+                            >
+                                <span className="whitespace-nowrap font-extrabold tracking-wide transition-colors duration-300
+                                    text-xs lg:text-sm"
+                                    style={{ color: r.color }}>
+                                    {r.name}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    )
+}
 
 const Placements = () => {
     const [sectionRef, inView] = useInView()
@@ -471,13 +394,8 @@ const Placements = () => {
     return (
         <section
             ref={sectionRef}
-            className="bg-[#F8FAFC] w-full overflow-hidden font-['DM_Sans','Inter',sans-serif]
-                py-10
-                sm:py-12
-                md:py-14
-                lg:py-16
-                xl:py-18
-                2xl:py-20
+            className="bg-[#F8FAFC] w-full overflow-hidden
+                py-10 sm:py-12 md:py-14 lg:py-16 xl:py-18 2xl:py-20
             "
         >
             <style>{`
@@ -489,22 +407,17 @@ const Placements = () => {
                     0%   { transform: translateX(-33.33%); }
                     100% { transform: translateX(0); }
                 }
-                @keyframes fadeUp {
-                    from { opacity: 0; transform: translateY(20px); }
-                    to   { opacity: 1; transform: translateY(0); }
-                }
             `}</style>
 
             {/* ── Section Header ── */}
             <div
                 className="
-                    px-4     mb-8
-                    sm:px-6  sm:mb-9
-                    md:px-10 md:mb-10
-                    lg:px-14 lg:mb-11
-                    xl:px-18 xl:mb-12
-                    2xl:px-22 2xl:mb-12
-                    transition-all duration-700
+                    px-4    pb-7
+                    sm:px-6 sm:pb-8
+                    md:px-10 md:pb-9
+                    lg:px-14 lg:pb-10
+                    xl:px-18 xl:pb-11
+                    2xl:px-22 2xl:pb-12
                 "
                 style={{
                     opacity: inView ? 1 : 0,
@@ -514,45 +427,49 @@ const Placements = () => {
             >
                 {/* Tag */}
                 <p className="flex items-center gap-2 font-extrabold tracking-[0.25em] uppercase text-[var(--viva-red)] mb-2.5
-                    text-[10px] sm:text-[10px] md:text-xs
+                    text-[10px] md:text-xs
                 ">
-                    <span className="inline-block h-0.5 bg-[var(--viva-red)] flex-shrink-0
-                        w-5 sm:w-5 md:w-6
-                    " />
+                    <span className="inline-block h-0.5 bg-[var(--viva-red)] flex-shrink-0 w-5 md:w-6" />
                     Placements
                 </p>
 
                 {/* Heading row */}
-                <div className="flex items-end justify-between flex-wrap
-                    gap-3 sm:gap-4
-                ">
+                <div className="flex items-end justify-between flex-wrap gap-3">
                     <h2 className="font-black text-[var(--viva-navy)] leading-[1.1] m-0
-                        text-2xl
-                        sm:text-3xl
-                        md:text-3xl
-                        lg:text-4xl
-                        xl:text-4xl
-                        2xl:text-4xl
+                        text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl
                     ">
                         Our Recruiters
                     </h2>
                     <p className="text-gray-500 leading-relaxed m-0
-                        text-xs    max-w-[200px]
-                        sm:text-xs sm:max-w-xs
-                        md:text-sm md:max-w-sm
-                        xl:text-sm xl:max-w-md
+                        text-[11px] max-w-[180px]
+                        sm:text-xs  sm:max-w-[220px]
+                        md:text-xs  md:max-w-sm
+                        lg:text-sm  lg:max-w-md
                     ">
                         50+ top companies visit VIVA College annually for campus recruitment drives across all streams.
                     </p>
                 </div>
             </div>
 
-            {/* ── Carousel ── */}
+            {/* ── Carousel — responsive per breakpoint ── */}
             <div
                 className="transition-opacity duration-700 delay-200"
                 style={{ opacity: inView ? 1 : 0 }}
             >
-                <RecruiterCarousel paused={paused} setPaused={setPaused} />
+                {/* sm only — single row */}
+                <div className="block sm:block md:hidden">
+                    <MobileCarousel paused={paused} setPaused={setPaused} />
+                </div>
+
+                {/* md only — 2 rows medium */}
+                <div className="hidden md:block lg:hidden">
+                    <TabletCarousel paused={paused} setPaused={setPaused} />
+                </div>
+
+                {/* lg xl 2xl — full desktop */}
+                <div className="hidden lg:block">
+                    <DesktopCarousel paused={paused} setPaused={setPaused} />
+                </div>
             </div>
 
         </section>

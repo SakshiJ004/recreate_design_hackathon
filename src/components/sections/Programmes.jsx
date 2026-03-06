@@ -358,61 +358,69 @@ const Programmes = () => {
 
     return (
         <section id="programmes" className="w-full bg-[#F8FAFC]
-            py-10 sm:py-14 md:py-16 xl:py-20 2xl:py-24
+            py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 2xl:py-20
         ">
             <div className="
                 px-4
                 sm:px-6
-                md:px-10
-                lg:px-16
-                xl:px-20
-                2xl:px-24
+                md:px-8
+                lg:px-12
+                xl:px-16
+                2xl:px-20
             ">
 
-                {/* ── Header ── */}
-                <div className="pb-6 sm:pb-8 xl:pb-10">
+                {/* Header */}
+                <div className="pb-5 sm:pb-6 lg:pb-8 xl:pb-10">
                     <span className="inline-flex items-center gap-2 font-bold tracking-[0.3em] uppercase text-[var(--viva-red)]
-                        text-[10px] sm:text-xs
+                        text-[10px] sm:text-[10px] md:text-xs
                     ">
-                        <span className="w-5 sm:w-6 h-px bg-[var(--viva-red)]" />
+                        <span className="w-4 sm:w-5 md:w-6 h-px bg-[var(--viva-red)]" />
                         Academic Programmes
                     </span>
-                    <div className="mt-3 sm:mt-4 flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-4">
+                    <div className="mt-3 flex flex-col md:flex-row md:items-end justify-between gap-2 md:gap-4">
                         <h2 className="font-extrabold text-[var(--viva-navy)] leading-[1.2]
-                            text-xl sm:text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl
+                            text-xl
+                            sm:text-2xl
+                            md:text-3xl
+                            lg:text-3xl
+                            xl:text-4xl
+                            2xl:text-4xl
                         ">
                             Find Your<br />
                             <span className="text-[var(--viva-red)]">Perfect Course.</span>
                         </h2>
-                        <p className="text-gray-400 leading-relaxed max-w-xs
-                            text-xs sm:text-sm
+                        <p className="text-gray-400 leading-relaxed
+                            text-[11px] sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-sm
+                            max-w-[200px] sm:max-w-xs
                         ">
                             Explore UG & PG programmes across Arts, Commerce & Science.
                         </p>
                     </div>
-                    <div className="mt-3 sm:mt-4 w-12 sm:w-14 h-1 bg-[var(--viva-gold)] rounded-full" />
+                    <div className="mt-3 w-10 sm:w-12 h-1 bg-[var(--viva-gold)] rounded-full" />
                 </div>
 
-                {/* ── MOBILE/TABLET (sm, md) — Stacked Layout ── */}
-                <div className={`xl:hidden transition-all duration-200 ${animating ? "opacity-0" : "opacity-100"}`}>
+                {/* ── MOBILE / SM / MD — Stacked (320px - 1023px) ── */}
+                <div className={`lg:hidden transition-all duration-200 ${animating ? "opacity-0" : "opacity-100"}`}>
 
-                    {/* Controls card */}
-                    <div className="bg-[#0F1C3D] rounded-2xl overflow-hidden mb-4">
+                    {/* Controls */}
+                    <div className="bg-[#0F1C3D] rounded-2xl overflow-hidden mb-3">
 
                         {/* UG / PG */}
-                        <div className="px-4 sm:px-6 py-4 border-b border-white/10">
-                            <p className="text-white/60 text-[10px] font-bold tracking-[0.25em] uppercase mb-3">Programme Level</p>
+                        <div className="px-4 sm:px-5 py-3 sm:py-4 border-b border-white/10">
+                            <p className="text-white/60 text-[9px] sm:text-[10px] font-bold tracking-[0.25em] uppercase mb-2 sm:mb-3">
+                                Programme Level
+                            </p>
                             <div className="flex gap-2">
                                 {["UG", "PG"].map((l) => (
                                     <button key={l} onClick={() => handleLevel(l)}
-                                        className={`flex-1 py-2 sm:py-2.5 rounded-xl font-extrabold transition-all duration-300
-                                            text-xs sm:text-[12px]
+                                        className={`flex-1 py-2 rounded-xl font-extrabold transition-all duration-300
+                                            text-xs sm:text-sm
                                             ${level === l
                                                 ? "bg-white text-[var(--viva-navy)] shadow-md"
-                                                : "bg-white/10 text-white/50 hover:bg-white/15 hover:text-white/80"
+                                                : "bg-white/10 text-white/50 hover:bg-white/15"
                                             }`}>
                                         {l}
-                                        <span className="block text-[9px] font-medium opacity-60 mt-0.5">
+                                        <span className="block text-[8px] sm:text-[9px] font-medium opacity-60 mt-0.5">
                                             {l === "UG" ? "Undergraduate" : "Postgraduate"}
                                         </span>
                                     </button>
@@ -420,21 +428,23 @@ const Programmes = () => {
                             </div>
                         </div>
 
-                        {/* Stream — horizontal scroll on mobile */}
-                        <div className="px-4 sm:px-6 py-4">
-                            <p className="text-white/60 text-[10px] font-bold tracking-[0.25em] uppercase mb-3">Faculty / Stream</p>
+                        {/* Stream — horizontal pills */}
+                        <div className="px-4 sm:px-5 py-3 sm:py-4">
+                            <p className="text-white/60 text-[9px] sm:text-[10px] font-bold tracking-[0.25em] uppercase mb-2 sm:mb-3">
+                                Faculty / Stream
+                            </p>
                             <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
                                 {Object.keys(programmes[level]).map((s) => (
                                     <button key={s} onClick={() => handleStream(s)}
-                                        className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold whitespace-nowrap transition-all duration-300 flex-shrink-0
-                                            text-xs sm:text-sm
+                                        className={`flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-xl font-bold whitespace-nowrap transition-all duration-300 flex-shrink-0
+                                            text-[11px] sm:text-xs
                                             ${stream === s
                                                 ? `${streamConfig[s].bg} text-white`
                                                 : "bg-white/10 text-white/70 hover:bg-white/20 hover:text-white"
                                             }`}>
                                         <span>{streamConfig[s].icon}</span>
                                         <span>{s}</span>
-                                        <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold
+                                        <span className={`text-[9px] sm:text-[10px] px-1.5 py-0.5 rounded-full font-bold
                                             ${stream === s ? "bg-white/20 text-white" : "bg-white/10 text-white/40"}
                                         `}>
                                             {programmes[level][s].length}
@@ -445,51 +455,51 @@ const Programmes = () => {
                         </div>
                     </div>
 
-                    {/* Right header */}
-                    <div className={`bg-gradient-to-r ${c.gradient} rounded-t-2xl px-4 sm:px-6 py-4 flex items-center justify-between`}>
+                    {/* Course header */}
+                    <div className={`bg-gradient-to-r ${c.gradient} rounded-t-2xl px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between`}>
                         <div>
-                            <p className="text-white/50 font-bold tracking-[0.2em] uppercase text-[10px] sm:text-xs">
+                            <p className="text-white/50 font-bold tracking-[0.2em] uppercase text-[9px] sm:text-[10px]">
                                 {level} • Faculty of {stream}
                             </p>
-                            <h3 className="text-white font-extrabold mt-1 text-base sm:text-lg md:text-xl">
+                            <h3 className="text-white font-extrabold mt-0.5 text-sm sm:text-base md:text-lg">
                                 {currentCourses.length} Programmes
                             </h3>
                         </div>
-                        <div className="font-black text-white/10 select-none text-5xl sm:text-6xl">{stream[0]}</div>
+                        <div className="font-black text-white/10 select-none text-4xl sm:text-5xl">{stream[0]}</div>
                     </div>
 
                     {/* Course list */}
-                    <div className="bg-white rounded-b-2xl divide-y divide-gray-50 mb-4 overflow-hidden">
+                    <div className="bg-white rounded-b-2xl divide-y divide-gray-50 mb-3 overflow-hidden">
                         {currentCourses.map((course, i) => (
                             <button
                                 key={i}
                                 onClick={() => setExpandedCourse(expandedCourse === i ? null : i)}
                                 className={`w-full flex items-center gap-3 text-left transition-all duration-200 group hover:bg-gray-50
-                                    px-4 sm:px-6 py-3 sm:py-4
+                                    px-4 sm:px-5 py-2.5 sm:py-3
                                     ${expandedCourse === i ? "bg-gray-50" : ""}
                                 `}
                             >
                                 <div className={`${c.light} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200
-                                    w-9 h-9 sm:w-11 sm:h-11
+                                    w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10
                                 `}>
                                     {course.icon}
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <h4 className={`font-extrabold leading-snug transition-colors duration-200
-                                        text-xs sm:text-sm
+                                        text-[11px] sm:text-xs md:text-sm
                                         ${expandedCourse === i ? c.text : "text-[var(--viva-navy)]"}
                                     `}>
                                         {course.name}
                                     </h4>
-                                    <p className="text-gray-400 mt-0.5 text-[10px] sm:text-xs">{course.duration}</p>
+                                    <p className="text-gray-400 mt-0.5 text-[9px] sm:text-[10px] md:text-xs">{course.duration}</p>
                                     {expandedCourse === i && (
-                                        <p className={`mt-1 text-[10px] sm:text-xs ${c.text} opacity-80`}>{course.desc}</p>
+                                        <p className={`mt-1 text-[9px] sm:text-[10px] md:text-xs ${c.text} opacity-80`}>{course.desc}</p>
                                     )}
                                 </div>
-                                <div className={`rounded-full ${c.light} flex items-center justify-center flex-shrink-0 transition-all duration-300
-                                    w-7 h-7 sm:w-8 sm:h-8
+                                <div className={`rounded-full ${c.light} flex items-center justify-center flex-shrink-0
+                                    w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8
                                 `}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none"
                                         stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
                                         className={c.text}
                                         style={{ transform: expandedCourse === i ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }}>
@@ -500,28 +510,39 @@ const Programmes = () => {
                         ))}
                     </div>
 
-                    {/* Eligibility info */}
-                    <p className="text-center text-gray-400 text-xs pb-2">
+                    <p className="text-center text-gray-400 text-[10px] sm:text-xs pb-1">
                         {level === "UG" ? "Eligibility: 10+2 pass • Duration: 3 Years" : "Eligibility: Graduation • Duration: 2 Years"}
                     </p>
                 </div>
 
-                {/* ── DESKTOP (xl+) — Original Side by Side Layout ── */}
-                <div className={`hidden xl:grid xl:grid-cols-5 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 transition-all duration-200 ${animating ? "opacity-0" : "opacity-100"}`}>
+                {/* ── DESKTOP lg / xl / 2xl — Side by Side (1024px+) ── */}
+                <div className={`hidden lg:grid lg:grid-cols-5 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 transition-all duration-200 ${animating ? "opacity-0" : "opacity-100"}`}>
 
                     {/* LEFT PANEL */}
-                    <div className="xl:col-span-1 bg-[#0F1C3D] flex flex-col">
-                        <div className="px-6 2xl:px-8 py-6 border-b border-white/10">
-                            <p className="text-white/60 text-xs font-bold tracking-[0.25em] uppercase pb-4">Programme Level</p>
+                    <div className="lg:col-span-1 bg-[#0F1C3D] flex flex-col">
+
+                        {/* UG/PG */}
+                        <div className="
+                            px-4 py-4
+                            xl:px-6 xl:py-5
+                            2xl:px-8 2xl:py-6
+                            border-b border-white/10
+                        ">
+                            <p className="text-white/60 font-bold tracking-[0.25em] uppercase pb-3
+                                text-[9px] xl:text-[10px] 2xl:text-xs
+                            ">Programme Level</p>
                             <div className="flex gap-2">
                                 {["UG", "PG"].map((l) => (
                                     <button key={l} onClick={() => handleLevel(l)}
-                                        className={`flex-1 py-2.5 rounded-xl font-extrabold text-sm transition-all duration-300 ${level === l
-                                            ? "bg-white text-[var(--viva-navy)] shadow-md"
-                                            : "bg-white/10 text-white/50 hover:bg-white/15 hover:text-white/80"
+                                        className={`flex-1 rounded-xl font-extrabold transition-all duration-300
+                                            py-2 text-xs
+                                            xl:py-2.5 xl:text-sm
+                                            ${level === l
+                                                ? "bg-white text-[var(--viva-navy)] shadow-md"
+                                                : "bg-white/10 text-white/50 hover:bg-white/15 hover:text-white/80"
                                             }`}>
                                         {l}
-                                        <span className="block text-[9px] font-medium opacity-60 mt-0.5">
+                                        <span className="block font-medium opacity-60 mt-0.5 text-[8px] xl:text-[9px]">
                                             {l === "UG" ? "Undergraduate" : "Postgraduate"}
                                         </span>
                                     </button>
@@ -529,18 +550,32 @@ const Programmes = () => {
                             </div>
                         </div>
 
-                        <div className="px-6 2xl:px-8 py-6 border-b border-white/10">
-                            <p className="text-white/60 text-xs font-bold tracking-[0.25em] uppercase mb-3">Faculty / Stream</p>
-                            <div className="flex flex-col gap-2">
+                        {/* Stream */}
+                        <div className="
+                            px-4 py-4
+                            xl:px-6 xl:py-5
+                            2xl:px-8 2xl:py-6
+                            border-b border-white/10
+                        ">
+                            <p className="text-white/60 font-bold tracking-[0.25em] uppercase mb-2 xl:mb-3
+                                text-[9px] xl:text-[10px] 2xl:text-xs
+                            ">Faculty / Stream</p>
+                            <div className="flex flex-col gap-1.5 xl:gap-2">
                                 {Object.keys(programmes[level]).map((s) => (
                                     <button key={s} onClick={() => handleStream(s)}
-                                        className={`flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 border-l-4 ${stream === s
-                                            ? `${streamConfig[s].bg} text-white border-white`
-                                            : "bg-white/5 text-white/70 border-transparent hover:bg-white/15 hover:text-white"
+                                        className={`flex items-center gap-2 xl:gap-3 rounded-xl font-bold transition-all duration-300 border-l-4
+                                            px-3 py-2 text-xs
+                                            xl:px-4 xl:py-2.5 xl:text-sm
+                                            ${stream === s
+                                                ? `${streamConfig[s].bg} text-white border-white`
+                                                : "bg-white/5 text-white/70 border-transparent hover:bg-white/15 hover:text-white"
                                             }`}>
                                         <span>{streamConfig[s].icon}</span>
                                         <span>{s}</span>
-                                        <span className={`ml-auto text-xs px-2 py-0.5 rounded-full ${stream === s ? "bg-white/20 text-white" : "bg-white/10 text-white/30"}`}>
+                                        <span className={`ml-auto rounded-full font-bold
+                                            text-[9px] xl:text-xs px-1.5 py-0.5
+                                            ${stream === s ? "bg-white/20 text-white" : "bg-white/10 text-white/30"}
+                                        `}>
                                             {programmes[level][s].length}
                                         </span>
                                     </button>
@@ -548,55 +583,75 @@ const Programmes = () => {
                             </div>
                         </div>
 
-                        <div className="px-6 2xl:px-8 py-5 mt-auto">
-                            <p className="text-white/50 text-xs leading-relaxed">
+                        {/* Info */}
+                        <div className="px-4 xl:px-6 2xl:px-8 py-4 xl:py-5 mt-auto">
+                            <p className="text-white/50 leading-relaxed text-[9px] xl:text-[10px] 2xl:text-xs">
                                 {level === "UG" ? "Eligibility: 10+2 pass • Duration: 3 Years" : "Eligibility: Graduation • Duration: 2 Years"}
                             </p>
                         </div>
                     </div>
 
                     {/* RIGHT PANEL */}
-                    <div className="xl:col-span-4 bg-white flex flex-col">
-                        <div className={`px-8 2xl:px-10 py-6 bg-gradient-to-r ${c.gradient} flex items-center justify-between`}>
+                    <div className="lg:col-span-4 bg-white flex flex-col">
+
+                        {/* Right header */}
+                        <div className={`bg-gradient-to-r ${c.gradient} flex items-center justify-between
+                            px-6 py-4
+                            xl:px-8 xl:py-5
+                            2xl:px-10 2xl:py-6
+                        `}>
                             <div>
-                                <p className="text-white/50 text-xs font-bold tracking-[0.2em] uppercase">
+                                <p className="text-white/50 font-bold tracking-[0.2em] uppercase
+                                    text-[9px] xl:text-[10px] 2xl:text-xs
+                                ">
                                     {level} • Faculty of {stream}
                                 </p>
-                                <h3 className="text-white font-extrabold mt-1 xl:text-xl 2xl:text-2xl">
+                                <h3 className="text-white font-extrabold mt-1
+                                    text-base lg:text-lg xl:text-xl 2xl:text-2xl
+                                ">
                                     {currentCourses.length} Programmes
                                 </h3>
                             </div>
-                            <div className="font-black text-white/10 select-none xl:text-6xl 2xl:text-7xl">{stream[0]}</div>
+                            <div className="font-black text-white/10 select-none
+                                text-5xl xl:text-6xl 2xl:text-7xl
+                            ">{stream[0]}</div>
                         </div>
 
-                        <div className="flex-1 divide-y divide-gray-50" style={{ maxHeight: '480px', overflowY: 'auto', scrollbarWidth: 'none' }}>
+                        {/* Course list */}
+                        <div className="flex-1 divide-y divide-gray-50" style={{ maxHeight: '420px', overflowY: 'auto', scrollbarWidth: 'none' }}>
                             {currentCourses.map((course, i) => (
                                 <button
                                     key={i}
                                     onClick={() => setExpandedCourse(expandedCourse === i ? null : i)}
-                                    className={`w-full flex items-center gap-4 text-left transition-all duration-200 group hover:bg-gray-50
-                                        px-6 2xl:px-8 py-4 2xl:py-5
+                                    className={`w-full flex items-center text-left transition-all duration-200 group hover:bg-gray-50
+                                        gap-3 px-5 py-3
+                                        xl:gap-4 xl:px-7 xl:py-3.5
+                                        2xl:px-8 2xl:py-4
                                         ${expandedCourse === i ? "bg-gray-50" : ""}
                                     `}
                                 >
                                     <div className={`${c.light} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200
-                                        w-10 h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12
+                                        w-9 h-9
+                                        xl:w-10 xl:h-10
+                                        2xl:w-11 2xl:h-11
                                     `}>
                                         {course.icon}
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <h4 className={`font-extrabold leading-snug transition-colors duration-200
-                                            xl:text-sm 2xl:text-base
+                                            text-xs lg:text-xs xl:text-sm 2xl:text-sm
                                             ${expandedCourse === i ? c.text : "text-[var(--viva-navy)]"}
                                         `}>
                                             {course.name}
                                         </h4>
-                                        <p className="text-gray-400 mt-0.5 xl:text-xs 2xl:text-sm">{course.duration}</p>
+                                        <p className="text-gray-400 mt-0.5
+                                            text-[10px] xl:text-xs 2xl:text-xs
+                                        ">{course.duration}</p>
                                     </div>
                                     <div className={`rounded-full ${c.light} flex items-center justify-center flex-shrink-0
-                                        w-8 h-8 2xl:w-9 2xl:h-9
+                                        w-7 h-7 xl:w-8 xl:h-8
                                     `}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
                                             className={c.text}>
                                             <path d="M5 12h14M12 5l7 7-7 7" />
@@ -608,31 +663,30 @@ const Programmes = () => {
                     </div>
                 </div>
 
-                {/* ── Bottom CTA ── */}
-                <div className="text-center pt-8 sm:pt-10 xl:pt-12">
-                    <p className="text-gray-400 pb-3 sm:pb-4 text-xs sm:text-sm">
+                {/* Bottom CTA */}
+                <div className="text-center
+                    pt-6 sm:pt-8 lg:pt-10 xl:pt-12
+                ">
+                    <p className="text-gray-400 pb-3
+                        text-[11px] sm:text-xs xl:text-sm
+                    ">
                         Ready to start your journey at Viva College?
                     </p>
-                    <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
+                    <div className="flex justify-center flex-wrap gap-3">
                         <button className="
                             bg-[var(--viva-red)] text-white font-bold rounded-full
-                            shadow-md hover:bg-red-700 hover:shadow-lg hover:scale-105
-                            transition-all duration-300
-                            px-7 py-3 text-xs
-                            sm:px-8 sm:py-3 sm:text-sm
-                            xl:px-10 xl:py-3.5 xl:text-sm
-                        ">
-                            Apply Now →
-                        </button>
+                            shadow-md hover:bg-red-700 hover:shadow-lg hover:scale-105 transition-all duration-300
+                            px-6 py-2.5 text-xs
+                            sm:px-7 sm:py-3 sm:text-xs
+                            xl:px-9 xl:py-3 xl:text-sm
+                        ">Apply Now →</button>
                         <button className="
                             border-2 border-[var(--viva-navy)] text-[var(--viva-navy)] font-bold rounded-full
                             hover:bg-[var(--viva-navy)] hover:text-white transition-all duration-300
-                            px-7 py-3 text-xs
-                            sm:px-8 sm:py-3 sm:text-sm
-                            xl:px-10 xl:py-3.5 xl:text-sm
-                        ">
-                            Download Prospectus
-                        </button>
+                            px-6 py-2.5 text-xs
+                            sm:px-7 sm:py-3 sm:text-xs
+                            xl:px-9 xl:py-3 xl:text-sm
+                        ">Download Prospectus</button>
                     </div>
                 </div>
 

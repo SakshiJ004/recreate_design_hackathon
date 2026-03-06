@@ -188,7 +188,12 @@ export default function Ticker() {
                     flex-shrink-0 flex items-center h-full
                     text-white font-bold tracking-widest uppercase z-10
 
-                    gap-1.5 px-2 min-w-[80px] text-[12px]
+                    gap-1.5 px-3 min-w-[80px] text-[9px]
+                    sm:min-w-[85px] sm:text-[10px]
+                    md:min-w-[95px] md:text-[10px]
+                    lg:min-w-[100px] lg:text-[11px]
+                    xl:min-w-[105px] xl:text-xs
+                    2xl:min-w-[110px] 2xl:text-xs
                 "
                 style={{ background: '#8B1E2D' }}
             >
@@ -207,7 +212,10 @@ export default function Ticker() {
                 <div
                     className="
                         ticker-content flex items-center font-medium
-                        text-[12px]
+                        text-[10px]
+                        md:text-xs
+                        xl:text-[12px]
+                        2xl:text-sm
                     "
                     style={{ color: '#1F2F5E' }}
                 >
@@ -216,14 +224,24 @@ export default function Ticker() {
                             key={index}
                             className="
                                 flex items-center whitespace-nowrap group cursor-pointer
-                                gap-4 px-3
+                                gap-3 px-3
+                                sm:gap-4 sm:px-4
+                                md:gap-4 md:px-5
+                                lg:gap-5 lg:px-5
+                                xl:gap-6 xl:px-6
+                                2xl:gap-6 2xl:px-6
                             "
                         >
                             <span
                                 className="
                                     notice-text transition-colors duration-300
                                     group-hover:text-[var(--viva-gold)]
-                                    px-4
+                                    px-2
+                                    sm:px-3
+                                    md:px-4
+                                    lg:px-5
+                                    xl:px-6
+                                    2xl:px-8
                                 "
                             >
                                 {item.text}

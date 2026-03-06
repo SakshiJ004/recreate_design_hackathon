@@ -300,7 +300,7 @@ const AdmissionsHome = () => {
                 xl:-mt-8  xl:pb-14  xl:px-16
                 2xl:-mt-8 2xl:pb-16 2xl:px-18
             ">
-                <div className="pb-6 sm:pb-8 xl:pb-8 xl:pt-10 grid grid-cols-1 md:grid-cols-2
+                <div className="pb-6 sm:pb-8 sm:pt-10 xl:pb-8 xl:pt-10 grid grid-cols-1 md:grid-cols-2
                     gap-4 sm:gap-5 xl:gap-6
                 ">
                     {cards.map((card) => (

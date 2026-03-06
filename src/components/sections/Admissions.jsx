@@ -261,7 +261,7 @@ const AdmissionsHome = () => {
                     md:px-10 md:py-14
                     lg:px-14 lg:py-16
                     xl:px-18 xl:py-16
-                    2xl:px-22 2xl:py-18
+                    2xl:px-22 2xl:py-14
                 ">
                     <div>
                         <span className="inline-flex items-center gap-2 font-bold tracking-[0.3em] uppercase text-[var(--viva-red)]
@@ -271,18 +271,18 @@ const AdmissionsHome = () => {
                             Admissions 2025–26
                         </span>
                         <h2 className="font-extrabold text-white leading-[1.1]
-                            mt-2 text-2xl
-                            sm:mt-3 sm:text-3xl
-                            md:mt-4 md:text-4xl
-                            lg:text-5xl
-                            xl:text-5xl
-                            2xl:text-5xl
+                            mt-2 text-xl
+                            sm:mt-3 sm:text-2xl
+                            md:mt-4 md:text-3xl
+                            lg:text-4xl
+                            xl:text-4xl
+                            2xl:text-4xl
                         ">
                             Your Future<br />
                             <span style={{ WebkitTextStroke: '2px #C8102E', color: 'transparent' }}>Starts Here.</span>
                         </h2>
                     </div>
-                    <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:pb-4">
                         <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                         <span className="text-emerald-400 font-bold
                             text-xs sm:text-sm
@@ -294,13 +294,13 @@ const AdmissionsHome = () => {
             {/* Cards */}
             <div className="
                 -mt-6   pb-10   px-4
-                sm:-mt-6  sm:pb-12  sm:px-6
-                md:-mt-8  md:pb-14  md:px-10
-                lg:-mt-8  lg:pb-14  lg:px-14
-                xl:-mt-8  xl:pb-16  xl:px-18
-                2xl:-mt-8 2xl:pb-18 2xl:px-22
+                sm:-mt-6  sm:pb-8  sm:px-6
+                md:-mt-8  md:pb-10  md:px-10
+                lg:-mt-8  lg:pb-12  lg:px-12
+                xl:-mt-8  xl:pb-14  xl:px-16
+                2xl:-mt-8 2xl:pb-16 2xl:px-18
             ">
-                <div className="pb-6 sm:pb-8 xl:pb-10 grid grid-cols-1 md:grid-cols-2
+                <div className="pb-6 sm:pb-8 xl:pb-8 grid grid-cols-1 md:grid-cols-2
                     gap-4 sm:gap-5 xl:gap-6
                 ">
                     {cards.map((card) => (
@@ -323,7 +323,7 @@ const AdmissionsHome = () => {
 
                             {/* Number watermark */}
                             <div className="absolute top-3 right-4 font-extrabold select-none transition-all duration-500 leading-none
-                                text-[60px] sm:text-[80px] md:text-[90px] xl:text-[100px] 2xl:text-[110px]
+                                text-[60px] sm:text-[80px] md:text-[90px] xl:text-[100px] 2xl:text-[90px]
                             "
                                 style={{ color: hoveredCard === card.id ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)' }}>
                                 {card.number}
@@ -336,15 +336,15 @@ const AdmissionsHome = () => {
                                 md:p-6
                                 lg:p-7
                                 xl:p-8
-                                2xl:p-8
+                                2xl:p-6
                             ">
                                 {/* Top row */}
                                 <div className="flex items-start justify-between
-                                    pb-5 sm:pb-6 xl:pb-8
+                                    pb-5 sm:pb-6 xl:pb-5
                                 ">
                                     <div className="flex items-center gap-2 sm:gap-3">
                                         <div className="rounded-2xl flex items-center justify-center transition-all duration-500
-                                            w-9 h-9 sm:w-10 sm:h-10 xl:w-12 xl:h-12
+                                            w-9 h-9 sm:w-10 sm:h-10 xl:w-10 xl:h-8
                                         "
                                             style={{ backgroundColor: hoveredCard === card.id ? 'rgba(255,255,255,0.15)' : card.accentLight }}>
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -358,13 +358,13 @@ const AdmissionsHome = () => {
                                         </div>
                                         <div>
                                             <p className="font-black tracking-widest uppercase transition-colors duration-500
-                                                text-[8px] sm:text-[9px] xl:text-xs
+                                                text-[8px] sm:text-[9px] xl:text-[10px]
                                             "
                                                 style={{ color: hoveredCard === card.id ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
                                                 Programme Level
                                             </p>
                                             <p className="font-extrabold transition-colors duration-500
-                                                text-sm sm:text-base xl:text-lg
+                                                text-sm sm:text-base xl:text-[12px]
                                             "
                                                 style={{ color: hoveredCard === card.id ? 'white' : card.accent }}>
                                                 {card.shortLabel}
@@ -374,7 +374,7 @@ const AdmissionsHome = () => {
 
                                     {/* Arrow */}
                                     <div className="rounded-full flex items-center justify-center transition-all duration-500 flex-shrink-0
-                                        w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10
+                                        w-8 h-8 sm:w-9 sm:h-9 xl:w-8 xl:h-8
                                     "
                                         style={{
                                             backgroundColor: hoveredCard === card.id ? 'rgba(255,255,255,0.15)' : 'white',
@@ -391,21 +391,21 @@ const AdmissionsHome = () => {
 
                                 {/* Title */}
                                 <h3 className="font-extrabold mb-1 transition-colors duration-500
-                                    text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-3xl
+                                    text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-2xl
                                 "
                                     style={{ color: hoveredCard === card.id ? 'white' : '#0F1C3D' }}>
                                     {card.label}
                                 </h3>
 
                                 <p className="font-bold mb-2 sm:mb-3 transition-colors duration-500
-                                    text-xs sm:text-sm
+                                    text-xs sm:text-[14px]
                                 "
                                     style={{ color: hoveredCard === card.id ? 'rgba(255,255,255,0.6)' : card.accent }}>
                                     {card.sub}
                                 </p>
 
                                 <p className="leading-relaxed transition-colors duration-500
-                                    text-xs sm:text-sm
+                                    text-xs sm:text-[11px]
                                     mb-4 sm:mb-5 xl:mb-7
                                 "
                                     style={{ color: hoveredCard === card.id ? 'rgba(255,255,255,0.7)' : '#6B7280' }}>
@@ -420,13 +420,13 @@ const AdmissionsHome = () => {
 
                                 {/* Stream pills */}
                                 <div className="flex gap-2 flex-wrap
-                                    pt-3 sm:pt-4 xl:pt-8
+                                    pt-3 sm:pt-4 xl:pt-6
                                 ">
                                     {card.streams.map((s, i) => (
                                         <div key={i}
                                             className="flex items-center gap-1.5 rounded-full font-bold transition-all duration-500
                                                 px-2.5 py-1 text-[10px]
-                                                sm:px-3 sm:py-1.5 sm:text-xs
+                                                sm:px-3 sm:py-1.5 sm:text-[10px]
                                             "
                                             style={{
                                                 backgroundColor: hoveredCard === card.id ? 'rgba(255,255,255,0.15)' : 'white',
@@ -450,11 +450,11 @@ const AdmissionsHome = () => {
                     rounded-2xl border border-gray-100 bg-[#F8FAFC]
                     px-4 py-4
                     sm:px-5 sm:py-4
-                    xl:px-7 xl:py-5
+                    xl:px-5 xl:py-3
                 ">
                     <div className="flex items-center gap-3 xl:gap-4">
                         <div className="bg-[var(--viva-navy)] rounded-xl flex items-center justify-center flex-shrink-0
-                            w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10
+                            w-8 h-8 sm:w-9 sm:h-9 xl:w-8 xl:h-8
                         ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -462,10 +462,10 @@ const AdmissionsHome = () => {
                         </div>
                         <div>
                             <p className="font-extrabold text-[var(--viva-navy)]
-                                text-xs sm:text-sm
+                                text-xs sm:text-[12px]
                             ">Need help choosing?</p>
                             <p className="text-gray-400
-                                text-[10px] sm:text-xs
+                                text-[10px] sm:text-[10px]
                             ">Call us: +91 250 2450 891 • Mon–Sat, 10am–5pm</p>
                         </div>
                     </div>
@@ -474,7 +474,7 @@ const AdmissionsHome = () => {
                         className="flex items-center gap-2 bg-[var(--viva-red)] text-white font-bold rounded-full hover:bg-red-700 transition-all hover:scale-105 flex-shrink-0
                             px-4 py-2 text-xs
                             sm:px-5 sm:py-2.5 sm:text-xs
-                            xl:px-6 xl:py-3 xl:text-sm
+                            xl:px-5 xl:py-2.5 xl:text-[12px]
                         ">
                         Explore All Admissions
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

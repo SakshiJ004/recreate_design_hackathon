@@ -188,12 +188,7 @@ export default function Ticker() {
                     flex-shrink-0 flex items-center h-full
                     text-white font-bold tracking-widest uppercase z-10
 
-                    gap-1.5 px-3 min-w-[80px] text-[9px]
-                    sm:min-w-[85px] sm:text-[10px]
-                    md:min-w-[95px] md:text-[10px]
-                    lg:min-w-[100px] lg:text-[11px]
-                    xl:min-w-[105px] xl:text-xs
-                    2xl:min-w-[110px] 2xl:text-xs
+                    gap-1.5 px-2 min-w-[80px] text-[12px]
                 "
                 style={{ background: '#8B1E2D' }}
             >
@@ -228,12 +223,7 @@ export default function Ticker() {
                                 className="
                                     notice-text transition-colors duration-300
                                     group-hover:text-[var(--viva-gold)]
-                                    px-2
-                                    sm:px-3
-                                    md:px-4
-                                    lg:px-5
-                                    xl:px-6
-                                    2xl:px-8
+                                    px-4
                                 "
                             >
                                 {item.text}

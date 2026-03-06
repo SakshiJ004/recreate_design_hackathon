@@ -254,6 +254,7 @@
 
 
 import React, { useState } from "react"
+import pdf from '../../assets/pdf/Prospectus.pdf'
 
 const programmes = {
     UG: {
@@ -372,7 +373,7 @@ const Programmes = () => {
                 {/* Header */}
                 <div className="pb-5 sm:pb-6 lg:pb-8 xl:pb-8">
                     <span className="inline-flex items-center gap-2 font-bold tracking-[0.3em] uppercase text-[var(--viva-red)]
-                        text-[10px] sm:text-[10px] md:text-xs
+                        text-[10px] sm:text-[10px] md:text-[12px]
                     ">
                         <span className="w-4 sm:w-5 md:w-6 h-px bg-[var(--viva-red)]" />
                         Academic Programmes
@@ -390,7 +391,7 @@ const Programmes = () => {
                             <span className="text-[var(--viva-red)]">Perfect Course.</span>
                         </h2>
                         <p className="text-gray-400 leading-relaxed
-                            text-[11px] sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-sm
+                            text-[11px] sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-[12px]
                             max-w-[200px] sm:max-w-xs
                         ">
                             Explore UG & PG programmes across Arts, Commerce & Science.
@@ -529,7 +530,7 @@ const Programmes = () => {
                             border-b border-white/10
                         ">
                             <p className="text-white/60 font-bold tracking-[0.25em] uppercase pb-3
-                                text-[9px] xl:text-[10px] 2xl:text-[11px]
+                                text-[9px] xl:text-[10px] 2xl:text-[10px]
                             ">Programme Level</p>
                             <div className="flex gap-2">
                                 {["UG", "PG"].map((l) => (
@@ -558,14 +559,14 @@ const Programmes = () => {
                             border-b border-white/10
                         ">
                             <p className="text-white/60 font-bold tracking-[0.25em] uppercase pb-3 xl:mb-3
-                                text-[9px] xl:text-[10px] 2xl:text-[12px]
+                                text-[9px] xl:text-[10px] 2xl:text-[11px]
                             ">Faculty / Stream</p>
                             <div className="flex flex-col gap-1.5 xl:gap-2">
                                 {Object.keys(programmes[level]).map((s) => (
                                     <button key={s} onClick={() => handleStream(s)}
                                         className={`flex items-center gap-2 xl:gap-3 rounded-xl font-bold transition-all duration-300 border-l-4
                                             px-3 py-2 text-xs
-                                            xl:px-4 xl:py-2.5 xl:text-[12px]
+                                            xl:px-4 xl:py-2 xl:text-[12px]
                                             ${stream === s
                                                 ? `${streamConfig[s].bg} text-white border-white`
                                                 : "bg-white/5 text-white/70 border-transparent hover:bg-white/15 hover:text-white"
@@ -680,13 +681,16 @@ const Programmes = () => {
                             sm:px-7 sm:py-3 sm:text-xs
                             xl:px-9 xl:py-3 xl:text-sm
                         ">Apply Now →</button>
-                        <button className="
+                        <a href={pdf}>
+                            <button className="
                             border-2 border-[var(--viva-navy)] text-[var(--viva-navy)] font-bold rounded-full
                             hover:bg-[var(--viva-navy)] hover:text-white transition-all duration-300
                             px-6 py-2.5 text-xs
                             sm:px-7 sm:py-3 sm:text-xs
                             xl:px-9 xl:py-3 xl:text-sm
                         ">Download Prospectus</button>
+                        </a>
+
                     </div>
                 </div>
 

@@ -573,7 +573,7 @@ const EventsNotices = () => {
     return (
         <section
             ref={sectionRef}
-            className="bg-white w-full overflow-hidden box-border py-16 sm:py-20 lg:py-[88px] px-4 sm:px-6 md:px-8 lg:px-12"
+            className="bg-white w-full overflow-hidden box-border py-16 sm:py-18 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12"
             style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
         >
             {/* ── Section Header ── */}

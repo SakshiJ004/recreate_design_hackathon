@@ -767,7 +767,7 @@ const About = () => {
                                 sm:mt-5 sm:text-sm
                                 md:text-sm
                                 xl:text-base
-                                2xl:text-md
+                                2xl:text-sm
                             ">
                                 Viva College, Mumbai — a premier institution under Vishnu Waman Thakur Charitable Trust,
                                 offering Arts, Commerce, and Science programs. Affiliated to University of Mumbai and
@@ -775,7 +775,7 @@ const About = () => {
                             </p>
 
                             {/* Feature list */}
-                            <div className="grid grid-cols-1 gap-2 sm:gap-3 xl:gap-4
+                            <div className="grid grid-cols-1 gap-2 sm:gap-3 xl:gap-4 2xl:gap-2
                                 mt-5 sm:mt-6 xl:mt-8
                             ">
                                 {[
@@ -839,17 +839,17 @@ const About = () => {
                                             w-12 h-12 sm:w-14 sm:h-14 xl:w-16 xl:h-16
                                         " />
                                         <div className="relative z-10 bg-[#FFF5F5] rounded-xl text-[var(--viva-red)] group-hover:scale-110 transition-transform duration-300
-                                            p-1.5 xl:p-2
+                                            p-1.5 xl:p-1.5
                                         ">
                                             {stat.icon}
                                         </div>
                                         <div className="font-extrabold text-[var(--viva-navy)]
                                             mt-3 text-xl
-                                            sm:mt-4 sm:text-2xl
-                                            xl:mt-6 xl:text-3xl
+                                            sm:mt-4 sm:text-xl
+                                            xl:mt-6 xl:text-2xl
                                         ">{stat.number}</div>
                                         <div className="font-medium text-gray-500 leading-snug
-                                            mt-0.5 text-[10px] sm:text-xs
+                                            mt-0.5 text-[10px] sm:text-[12px]
                                         ">{stat.label}</div>
                                         <div className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full bg-[var(--viva-red)] transition-all duration-500 rounded-b-2xl" />
                                     </div>
@@ -858,7 +858,7 @@ const About = () => {
 
                             {/* Journey */}
                             <div className="bg-[var(--viva-navy)] rounded-2xl
-                                p-5 sm:p-6 md:p-8 xl:p-10
+                                p-5 sm:p-6 md:p-8 xl:p-8
                             ">
                                 <div className="flex items-center gap-2
                                     mb-4 xl:mb-6
@@ -878,13 +878,13 @@ const About = () => {
                                         <div key={i} className="relative flex flex-col items-center gap-2 group flex-1">
                                             <div className="rounded-full bg-[var(--viva-red)] flex items-center justify-center text-white font-extrabold z-10 group-hover:scale-110 transition-transform duration-300 shadow-lg border-2 border-white/20
                                                 w-10 h-10 text-[10px]
-                                                md:w-12 md:h-12 md:text-[12px]
-                                                xl:w-14 xl:h-14 xl:text-[14px]
+                                                md:w-12 md:h-12 md:text-[10px]
+                                                xl:w-14 xl:h-14 xl:text-[12px]
                                             ">
                                                 {m.year}
                                             </div>
                                             <div className="font-semibold text-white/70 group-hover:text-white transition-colors duration-200 text-center
-                                                text-[9px] sm:text-[10px] md:text-xs xl:text-sm
+                                                text-[9px] sm:text-[10px] md:text-xs xl:text-[12px]
                                             ">
                                                 {m.text}
                                             </div>

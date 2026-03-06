@@ -208,7 +208,7 @@ const CampusLife = () => {
     const [activeTab, setActiveTab] = useState(0)
 
     return (
-        <section style={{
+        <section id='campus-life' style={{
             background: '#F8FAFC',
             padding: '80px 0 80px',
             fontFamily: "'DM Sans', 'Inter', sans-serif",

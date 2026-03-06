@@ -546,7 +546,7 @@ const AdmissionsHome = () => {
     ]
 
     return (
-        <section className="w-full bg-white overflow-hidden">
+        <section id='admissions' className="w-full bg-white overflow-hidden">
 
             {/* Top diagonal band */}
             <div className="relative bg-[var(--viva-navy)] py-16 px-8 md:px-16 xl:px-24"

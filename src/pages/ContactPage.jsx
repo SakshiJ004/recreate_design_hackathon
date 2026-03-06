@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Header from '../components/layouts/Header'
 
 // ── SVG Icons ──
 const IconMapPin = ({ size = 20, color = 'currentColor' }) => (
@@ -127,12 +128,13 @@ const ContactPage = () => {
     }
 
     return (
-        <div style={{
+        <div id='contact' style={{
             background: '#F8FAFC',
             minHeight: '100vh',
             fontFamily: "'DM Sans', 'Inter', sans-serif",
             paddingBottom: 80,
         }}>
+            <Header />
             <style>{`
                 @keyframes fadeUp {
                     from { opacity: 0; transform: translateY(20px); }

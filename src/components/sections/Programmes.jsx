@@ -531,7 +531,7 @@ const Programmes = () => {
     }
 
     return (
-        <section className="w-full py-24 bg-[#F8FAFC]">
+        <section id="programmes" className="w-full py-24 bg-[#F8FAFC]">
             <div className="px-8 md:px-16 xl:px-24">
 
                 {/* Header */}

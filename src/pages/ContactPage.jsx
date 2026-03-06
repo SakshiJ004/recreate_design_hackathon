@@ -859,7 +859,7 @@ const ContactPage = () => {
                     {/* Department contacts */}
                     <div className="bg-white rounded-[20px] border border-gray-200
                         p-5 sm:p-6">
-                        <div className="flex items-center gap-2.5 mb-5">
+                        <div className="flex items-center gap-2.5 pb-5">
                             <div style={{
                                 width: 34, height: 34, borderRadius: 10,
                                 background: '#0F1C3D',

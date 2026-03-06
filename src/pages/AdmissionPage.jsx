@@ -1111,7 +1111,7 @@ const AdmissionsPage = () => {
 
                         {/* OVERVIEW */}
                         {activeTab === "overview" && (
-                            <div className="space-y-5 sm:space-y-6 pb-10">
+                            <div className="space-y-5 sm:space-y-6 pb-20">
                                 <div>
                                     <h2 className="font-extrabold text-[var(--viva-navy)] mb-1
                                         text-lg sm:text-lg lg:text-xl">{level} {stream} Programmes</h2>
@@ -1127,14 +1127,14 @@ const AdmissionsPage = () => {
                                 </div>
                                 <div className="py-4 sm:py-4 grid grid-cols-3 gap-3 sm:gap-4">
                                     {[
-                                        { label: "Courses Offered", value: d.courses.length, icon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg> },
-                                        { label: "Intake Capacity", value: d.seats, icon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /></svg> },
-                                        { label: "Duration", value: d.duration, icon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> },
+                                        { label: "Courses Offered", value: d.courses.length, icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg> },
+                                        { label: "Intake Capacity", value: d.seats, icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /></svg> },
+                                        { label: "Duration", value: d.duration, icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> },
                                     ].map((s, i) => (
                                         <div key={i} className={`p-3 sm:p-4 ${c.light} rounded-2xl`}>
-                                            <p className="text-lg sm:text-2xl mb-1.5 sm:mb-2">{s.icon}</p>
-                                            <p className={`text-base sm:text-xl font-extrabold ${c.text}`}>{s.value}</p>
-                                            <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1">{s.label}</p>
+                                            <p className="text-lg sm:text-[16px] mb-1.5 sm:mb-2">{s.icon}</p>
+                                            <p className={`text-base sm:text-[14px] font-extrabold ${c.text}`}>{s.value}</p>
+                                            <p className="text-[10px] sm:text-[12px] text-gray-400 mt-0.5 sm:mt-1">{s.label}</p>
                                         </div>
                                     ))}
                                 </div>

@@ -585,7 +585,6 @@
 
 // export default CampusLife
 
-
 import React, { useState } from 'react'
 import vivaFest from "../../assets/videos/event-day.mp4"
 import cultural from '../../assets/images/cultural1.png'
@@ -798,10 +797,12 @@ const CampusLife = () => {
     return (
         <section
             id="campus-life"
-            className="bg-[#F8FAFC] py-20 w-full font-[DM_Sans,Inter,sans-serif]"
+            className="bg-[#F8FAFC] py-16 sm:py-20 w-full"
+            style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
         >
             {/* ── Full width wrapper ── */}
-            <div className="w-full px-4 sm:px-8 lg:px-[48px] box-border">
+            {/* Original padding: 0 48px = px-12 on lg+, scale down on smaller screens */}
+            <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 box-border">
 
                 {/* ── Section header ── */}
                 <div className="mb-9">
@@ -809,7 +810,8 @@ const CampusLife = () => {
                         <span className="w-6 h-0.5 bg-[#C8102E] inline-block shrink-0" />
                         Campus Life
                     </p>
-                    <h2 className="text-[clamp(36px,4vw,52px)] font-black text-[#0F1C3D] leading-[1.1] mt-2">
+                    {/* Original: clamp(36px, 4vw, 52px) → sm:36 md:40 lg:44 xl:48 2xl:52 */}
+                    <h2 className="text-[36px] md:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[52px] font-black text-[#0F1C3D] leading-[1.1] mt-2">
                         Life at Viva.
                     </h2>
                 </div>
@@ -820,7 +822,7 @@ const CampusLife = () => {
                         <button
                             key={i}
                             onClick={() => setActiveTab(i)}
-                            className={`px-5 sm:px-7 py-3 font-semibold text-sm border-none bg-transparent cursor-pointer transition-all duration-200 font-[inherit] tracking-[0.02em] whitespace-nowrap -mb-0.5
+                            className={`px-5 sm:px-7 py-3 font-semibold text-sm border-none bg-transparent cursor-pointer font-[inherit] tracking-[0.02em] whitespace-nowrap -mb-0.5 transition-all duration-200
                                 ${activeTab === i
                                     ? 'text-[#0F1C3D] border-b-2 border-[#C8102E]'
                                     : 'text-gray-400 border-b-2 border-transparent'
@@ -838,7 +840,7 @@ const CampusLife = () => {
                     <div className="flex flex-col lg:flex-row gap-4 w-full lg:h-[460px]">
 
                         {/* Large left — Video */}
-                        <div className="lg:flex-[0_0_44%] rounded-[20px] overflow-hidden relative h-[260px] sm:h-[320px] lg:h-full">
+                        <div className="lg:flex-[0_0_44%] rounded-[20px] overflow-hidden relative h-[260px] sm:h-[300px] md:h-[360px] lg:h-full">
                             <video
                                 src={vivaFest}
                                 autoPlay
@@ -852,17 +854,17 @@ const CampusLife = () => {
                                 <p className="text-[10px] tracking-[0.18em] uppercase text-white/60 mb-1.5">
                                     Annual Cultural Fest
                                 </p>
-                                <p className="text-[22px] font-extrabold text-white leading-tight">
+                                <p className="text-[18px] sm:text-[20px] lg:text-[22px] font-extrabold text-white leading-tight">
                                     VIVA Fest 2025
                                 </p>
-                                <p className="text-xs text-white/55 mt-1">
+                                <p className="text-[11px] sm:text-xs text-white/55 mt-1">
                                     March 15–16 · Virar Campus
                                 </p>
                             </div>
                         </div>
 
                         {/* Right 2×2 grid */}
-                        <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-4">
+                        <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4 min-h-[280px] lg:min-h-0">
                             {[
                                 { label: 'Cultural Programme', sub: 'Annual Day 2025', img: cultural },
                                 { label: 'Sports Day', sub: 'Zonal Championship', img: sports },
@@ -881,9 +883,9 @@ const CampusLife = () => {
                                         alt={p.label}
                                         className="w-full h-full object-cover object-center block"
                                     />
-                                    <div className="absolute bottom-3.5 left-4">
-                                        <p className="text-[13px] font-bold text-white m-0">{p.label}</p>
-                                        <p className="text-[10px] text-white/60 mt-0.5">{p.sub}</p>
+                                    <div className="absolute bottom-3 sm:bottom-3.5 left-3 sm:left-4">
+                                        <p className="text-[11px] sm:text-[13px] font-bold text-white m-0">{p.label}</p>
+                                        <p className="text-[9px] sm:text-[10px] text-white/60 mt-0.5">{p.sub}</p>
                                     </div>
                                 </div>
                             ))}
@@ -901,7 +903,7 @@ const CampusLife = () => {
                             return (
                                 <div
                                     key={i}
-                                    className="bg-white border border-gray-200 rounded-[20px] p-6 flex flex-col gap-3.5 cursor-default"
+                                    className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-7 flex flex-col gap-3.5 cursor-default"
                                     style={{ transition: 'box-shadow 0.25s, transform 0.25s' }}
                                     onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 12px 32px rgba(15,28,61,0.10)'; e.currentTarget.style.transform = 'translateY(-4px)' }}
                                     onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' }}
@@ -917,16 +919,16 @@ const CampusLife = () => {
                                     </span>
 
                                     <div>
-                                        <p className="font-extrabold text-[15px] text-[#0F1C3D] mb-1.5 leading-[1.3]">
+                                        <p className="font-extrabold text-[14px] sm:text-[15px] text-[#0F1C3D] mb-1.5 leading-[1.3]">
                                             {club.name}
                                         </p>
-                                        <p className="text-xs text-gray-500 leading-relaxed">
+                                        <p className="text-[11px] sm:text-xs text-gray-500 leading-relaxed">
                                             {club.desc}
                                         </p>
                                     </div>
 
                                     <div className="flex items-center justify-between mt-auto pt-3.5 border-t border-gray-100">
-                                        <span className="text-xs text-gray-400 font-semibold flex items-center gap-1">
+                                        <span className="text-[11px] sm:text-xs text-gray-400 font-semibold flex items-center gap-1.5">
                                             <IconUsers size={14} color="#9CA3AF" /> {club.members}+ members
                                         </span>
                                         <button
@@ -951,7 +953,7 @@ const CampusLife = () => {
                     <div className="w-full">
 
                         {/* Stats bar — top */}
-                        <div className="bg-[#0F1C3D] rounded-[20px] px-6 sm:px-10 py-7 grid grid-cols-2 lg:grid-cols-4 gap-5 mb-7">
+                        <div className="bg-[#0F1C3D] rounded-[20px] px-6 sm:px-8 lg:px-10 py-6 sm:py-7 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-6 sm:mb-7">
                             {[
                                 { n: '15+', l: 'Sports Events Annually' },
                                 { n: '300+', l: 'Student Athletes' },
@@ -959,18 +961,18 @@ const CampusLife = () => {
                                 { n: '5', l: 'University Medals' },
                             ].map((s, i) => (
                                 <div key={i} className="text-center">
-                                    <p className="text-4xl font-black text-[#D4A017] leading-none">{s.n}</p>
-                                    <p className="text-[11px] text-white/45 mt-2 tracking-[0.1em] uppercase">{s.l}</p>
+                                    <p className="text-[28px] sm:text-[32px] lg:text-[36px] font-black text-[#D4A017] leading-none">{s.n}</p>
+                                    <p className="text-[10px] sm:text-[11px] text-white/45 mt-2 tracking-[0.1em] uppercase">{s.l}</p>
                                 </div>
                             ))}
                         </div>
 
                         {/* Achievement cards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                             {SPORTS.map((s, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white border border-gray-200 border-l-4 border-l-[#C8102E] rounded-2xl p-6 flex gap-4 items-start"
+                                    className="bg-white border border-gray-200 border-l-4 border-l-[#C8102E] rounded-2xl p-5 sm:p-6 flex gap-4 items-start"
                                 >
                                     <div className="w-[52px] h-[52px] shrink-0 bg-red-50 rounded-[14px] flex items-center justify-center font-black text-[#C8102E] text-lg">
                                         {s.position === '🏆'
@@ -982,10 +984,10 @@ const CampusLife = () => {
                                         <span className="text-[10px] font-bold text-gray-400 tracking-[0.1em] uppercase block mb-1">
                                             {s.year}
                                         </span>
-                                        <p className="font-extrabold text-[15px] text-[#0F1C3D] mb-1.5 leading-[1.3]">
+                                        <p className="font-extrabold text-[14px] sm:text-[15px] text-[#0F1C3D] mb-1.5 leading-[1.3]">
                                             {s.event}
                                         </p>
-                                        <p className="text-xs text-gray-500 leading-relaxed">
+                                        <p className="text-[11px] sm:text-xs text-gray-500 leading-relaxed">
                                             {s.detail}
                                         </p>
                                     </div>
@@ -1001,15 +1003,15 @@ const CampusLife = () => {
                 {activeTab === 3 && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                         {[
-                            { label: 'VIVA Fest 2025', sub: 'Annual Cultural Extravaganza', h: 'h-[260px]', img: collegeFest },
-                            { label: 'Annual Day', sub: 'Prize Distribution Ceremony', h: 'h-[260px]', img: cultural },
-                            { label: 'Sports Day 2025', sub: 'Inter-College Athletics Meet', h: 'h-[260px]', img: sports },
-                            { label: 'Science Exhibition', sub: 'Project Showcase 2024', h: 'h-[220px]', img: scienceExibition },
-                            { label: 'NSS Blood Donation', sub: 'Community Drive 2025', h: 'h-[220px]', img: bloodDonation },
-                            { label: 'Convocation 2024', sub: 'Graduation Ceremony', h: 'h-[220px]', img: convocation },
-                            { label: 'Maharashtra Times Carnival', sub: 'Annual Business Summit', h: 'h-[220px]', img: carnival },
-                            { label: 'NCC Parade', sub: 'Republic Day March 2025', h: 'h-[220px]', img: nss },
-                            { label: 'Farewell 2025', sub: 'TY Farewell Ceremony', h: 'h-[220px]', img: farewell },
+                            { label: 'VIVA Fest 2025', sub: 'Annual Cultural Extravaganza', h: 'h-[220px] sm:h-[240px] lg:h-[260px]', img: collegeFest },
+                            { label: 'Annual Day', sub: 'Prize Distribution Ceremony', h: 'h-[220px] sm:h-[240px] lg:h-[260px]', img: cultural },
+                            { label: 'Sports Day 2025', sub: 'Inter-College Athletics Meet', h: 'h-[220px] sm:h-[240px] lg:h-[260px]', img: sports },
+                            { label: 'Science Exhibition', sub: 'Project Showcase 2024', h: 'h-[190px] sm:h-[205px] lg:h-[220px]', img: scienceExibition },
+                            { label: 'NSS Blood Donation', sub: 'Community Drive 2025', h: 'h-[190px] sm:h-[205px] lg:h-[220px]', img: bloodDonation },
+                            { label: 'Convocation 2024', sub: 'Graduation Ceremony', h: 'h-[190px] sm:h-[205px] lg:h-[220px]', img: convocation },
+                            { label: 'Maharashtra Times Carnival', sub: 'Annual Business Summit', h: 'h-[190px] sm:h-[205px] lg:h-[220px]', img: carnival },
+                            { label: 'NCC Parade', sub: 'Republic Day March 2025', h: 'h-[190px] sm:h-[205px] lg:h-[220px]', img: nss },
+                            { label: 'Farewell 2025', sub: 'TY Farewell Ceremony', h: 'h-[190px] sm:h-[205px] lg:h-[220px]', img: farewell },
                         ].map((p, i) => (
                             <div
                                 key={i}
@@ -1028,9 +1030,9 @@ const CampusLife = () => {
                                 {/* Gradient overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
                                 {/* Caption */}
-                                <div className="absolute bottom-[18px] left-5">
-                                    <p className="text-[15px] font-extrabold text-white">{p.label}</p>
-                                    <p className="text-[11px] text-white/60 mt-0.5">{p.sub}</p>
+                                <div className="absolute bottom-[14px] sm:bottom-[18px] left-4 sm:left-5">
+                                    <p className="text-[13px] sm:text-[15px] font-extrabold text-white">{p.label}</p>
+                                    <p className="text-[10px] sm:text-[11px] text-white/60 mt-0.5">{p.sub}</p>
                                 </div>
                             </div>
                         ))}

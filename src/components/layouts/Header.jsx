@@ -103,7 +103,7 @@ const Header = () => {
                         <div className="
                             flex items-center border border-gray-400 rounded-full bg-white
                             px-3 py-1.5 w-[260px]
-                            xl:px-3 xl:py-2.5   xl:w-[300px]
+                            xl:px-3 xl:py-2   xl:w-[300px]
                             2xl:px-5 2xl:py-3 2xl:w-[480px]
                             
                         ">
@@ -115,21 +115,21 @@ const Header = () => {
                                 className="
                                     flex-1 outline-none bg-transparent text-gray-500 ml-2
                                     text-xs
-                                    xl:text-xs
+                                    xl:text-[12px]
                                     2xl:text-[16px]
                                 "
                             />
                             {searchQuery ? (
                                 <button onClick={() => setSearchQuery('')} className="text-gray-400 hover:text-[var(--viva-red)] transition-colors cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                        className="w-4 h-6 2xl:w-5 2xl:h-8"
+                                        className="w-4 h-6 xl:w-5 xl:h-6 2xl:w-5 2xl:h-8"
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                         <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
                                     </svg>
                                 </button>
                             ) : (
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    className="text-[var(--viva-navy)] flex-shrink-0 cursor-pointer w-4 h-6 2xl:w-5 2xl:h-8"
+                                    className="text-[var(--viva-navy)] flex-shrink-0 cursor-pointer w-4 h-6 xl:w-5 xl:h-6 2xl:w-5 2xl:h-8"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
                                 </svg>
@@ -142,7 +142,7 @@ const Header = () => {
                                 relative group overflow-hidden rounded-full font-bold text-white
                                 transition-all duration-300
                                 px-5  py-1.5 md:py-1.5  text-xs
-                                xl:px-5  xl:py-2.5    xl:text-xs
+                                xl:px-4  xl:py-2    xl:text-[12px]
                                 2xl:px-8  2xl:py-4.5  2xl:text-[16px]
                                 
                             "

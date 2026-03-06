@@ -193,6 +193,169 @@
 // export default Placements
 
 
+// import React, { useState, useEffect, useRef } from 'react'
+
+// // ── InView hook ──
+// const useInView = () => {
+//     const ref = useRef(null)
+//     const [inView, setInView] = useState(false)
+//     useEffect(() => {
+//         const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setInView(true) }, { threshold: 0.1 })
+//         if (ref.current) obs.observe(ref.current)
+//         return () => obs.disconnect()
+//     }, [])
+//     return [ref, inView]
+// }
+
+// const RECRUITERS = [
+//     { name: 'TCS', color: '#1D4ED8' },
+//     { name: 'Infosys', color: '#007CC3' },
+//     { name: 'Wipro', color: '#341C6A' },
+//     { name: 'Capgemini', color: '#0070AD' },
+//     { name: 'Amazon', color: '#FF9900' },
+//     { name: 'ICICI Bank', color: '#B02A2A' },
+//     { name: 'HDFC Bank', color: '#004C97' },
+//     { name: 'Tech Mahindra', color: '#E31837' },
+//     { name: 'Airtel', color: '#E40000' },
+//     { name: 'Axis Bank', color: '#97144D' },
+//     { name: 'Ernst & Young', color: '#2E3A59' },
+//     { name: 'KPMG', color: '#00338D' },
+//     { name: 'Bajaj FinServ', color: '#003399' },
+//     { name: 'Deloitte', color: '#5B8C00' },
+//     { name: 'Edelweiss', color: '#E31B23' },
+//     { name: 'Bajaj Allianz', color: '#FF6600' },
+//     { name: 'Birla Sunlife', color: '#E31837' },
+//     { name: 'Saraswat Bank', color: '#003087' },
+// ]
+
+// const ROW1 = RECRUITERS.slice(0, 12)
+// const ROW2 = RECRUITERS.slice(11)
+
+// // ── dynamic color values must stay in style={} ──
+// const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
+//     const doubled = [...items, ...items, ...items]
+//     const animName = direction === 'left' ? 'scrollLeft' : 'scrollRight'
+
+//     return (
+//         <div className="relative overflow-hidden">
+//             {/* Left fade */}
+//             <div
+//                 className="absolute left-0 top-0 bottom-0 w-[130px] z-[2] pointer-events-none"
+//                 style={{ background: 'linear-gradient(to right, #fff, transparent)' }}
+//             />
+//             {/* Right fade */}
+//             <div
+//                 className="absolute right-0 top-0 bottom-0 w-[120px] z-[2] pointer-events-none"
+//                 style={{ background: 'linear-gradient(to left, #fff, transparent)' }}
+//             />
+
+//             <div
+//                 onMouseEnter={() => setPaused(true)}
+//                 onMouseLeave={() => setPaused(false)}
+//                 className="flex gap-3.5 w-max"
+//                 style={{
+//                     animation: `${animName} 35s linear infinite`,
+//                     animationPlayState: paused ? 'paused' : 'running',
+//                 }}
+//             >
+//                 {doubled.map((r, i) => (
+//                     <div
+//                         key={i}
+//                         className="shrink-0 min-w-[180px] flex items-center justify-center rounded-2xl cursor-default px-8 py-[35px]"
+//                         style={{
+//                             border: `1.5px solid ${r.color}25`,
+//                             background: `${r.color}08`,
+//                             transition: 'all 0.25s ease',
+//                         }}
+//                         onMouseEnter={e => {
+//                             e.currentTarget.style.background = r.color
+//                             e.currentTarget.style.borderColor = r.color
+//                             e.currentTarget.style.transform = 'translateY(-4px)'
+//                             e.currentTarget.style.boxShadow = `0 12px 28px ${r.color}35`
+//                             e.currentTarget.querySelector('span').style.color = '#fff'
+//                         }}
+//                         onMouseLeave={e => {
+//                             e.currentTarget.style.background = `${r.color}08`
+//                             e.currentTarget.style.borderColor = `${r.color}25`
+//                             e.currentTarget.style.transform = 'translateY(0)'
+//                             e.currentTarget.style.boxShadow = 'none'
+//                             e.currentTarget.querySelector('span').style.color = r.color
+//                         }}
+//                     >
+//                         <span
+//                             className="text-sm font-extrabold whitespace-nowrap tracking-[0.02em]"
+//                             style={{
+//                                 color: r.color,
+//                                 transition: 'color 0.25s',
+//                             }}
+//                         >
+//                             {r.name}
+//                         </span>
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     )
+// }
+
+// const RecruiterCarousel = ({ paused, setPaused }) => (
+//     <div className="flex flex-col gap-3.5">
+//         <CarouselRow items={ROW1} direction="left" paused={paused} setPaused={setPaused} />
+//         <CarouselRow items={ROW2} direction="right" paused={paused} setPaused={setPaused} />
+//     </div>
+// )
+
+// const Placements = () => {
+//     const [sectionRef, inView] = useInView()
+//     const [paused, setPaused] = useState(false)
+
+//     return (
+//         <section
+//             ref={sectionRef}
+//             className="bg-[#F8FAFC] py-16 sm:py-18 lg:py-20 w-full box-border overflow-hidden"
+//             style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
+//         >
+//             {/* ── Section Header ── */}
+//             <div
+//                 className="px-4 sm:px-6 md:px-8 lg:px-12 pb-10 sm:mb-12 lg:mb-[52px]"
+//                 style={{
+//                     opacity: inView ? 1 : 0,
+//                     transform: inView ? 'translateY(0)' : 'translateY(20px)',
+//                     transition: 'all 0.6s ease',
+//                 }}
+//             >
+//                 <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#C8102E] mb-2.5 flex items-center gap-2">
+//                     <span className="w-6 h-0.5 bg-[#C8102E] inline-block" />
+//                     Placements
+//                 </p>
+
+//                 <div className="flex items-end justify-between flex-wrap gap-4">
+//                     {/* Original: clamp(32px,4vw,48px) → breakpoints */}
+//                     <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black text-[#0F1C3D] leading-[1.1] m-0">
+//                         Our Recruiters
+//                     </h2>
+//                     <p className="text-[12px] text-gray-500 max-w-[420px] m-0 leading-relaxed">
+//                         50+ top companies visit VIVA College annually for campus recruitment drives across all streams.
+//                     </p>
+//                 </div>
+//             </div>
+
+//             {/* ── Carousel ── */}
+//             <div
+//                 style={{
+//                     opacity: inView ? 1 : 0,
+//                     transition: 'opacity 0.8s ease 0.2s',
+//                 }}
+//             >
+//                 <RecruiterCarousel paused={paused} setPaused={setPaused} />
+//             </div>
+//         </section>
+//     )
+// }
+
+// export default Placements
+
+
 import React, { useState, useEffect, useRef } from 'react'
 
 // ── InView hook ──
@@ -231,7 +394,6 @@ const RECRUITERS = [
 const ROW1 = RECRUITERS.slice(0, 12)
 const ROW2 = RECRUITERS.slice(11)
 
-// ── dynamic color values must stay in style={} ──
 const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
     const doubled = [...items, ...items, ...items]
     const animName = direction === 'left' ? 'scrollLeft' : 'scrollRight'
@@ -239,33 +401,31 @@ const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
     return (
         <div className="relative overflow-hidden">
             {/* Left fade */}
-            <div
-                className="absolute left-0 top-0 bottom-0 w-[130px] z-[2] pointer-events-none"
-                style={{ background: 'linear-gradient(to right, #fff, transparent)' }}
-            />
+            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 z-10 pointer-events-none"
+                style={{ background: 'linear-gradient(to right, #F8FAFC, transparent)' }} />
             {/* Right fade */}
-            <div
-                className="absolute right-0 top-0 bottom-0 w-[120px] z-[2] pointer-events-none"
-                style={{ background: 'linear-gradient(to left, #fff, transparent)' }}
-            />
+            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 z-10 pointer-events-none"
+                style={{ background: 'linear-gradient(to left, #F8FAFC, transparent)' }} />
 
             <div
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
-                className="flex gap-3.5 w-max"
+                className="flex"
                 style={{
+                    gap: '10px',
+                    width: 'max-content',
                     animation: `${animName} 35s linear infinite`,
                     animationPlayState: paused ? 'paused' : 'running',
                 }}
             >
                 {doubled.map((r, i) => (
-                    <div
-                        key={i}
-                        className="shrink-0 min-w-[180px] flex items-center justify-center rounded-2xl cursor-default px-8 py-[35px]"
+                    <div key={i}
+                        className="flex-shrink-0 flex items-center justify-center rounded-2xl cursor-default transition-all duration-300"
                         style={{
+                            padding: '20px 20px',
+                            minWidth: '120px',
                             border: `1.5px solid ${r.color}25`,
                             background: `${r.color}08`,
-                            transition: 'all 0.25s ease',
                         }}
                         onMouseEnter={e => {
                             e.currentTarget.style.background = r.color
@@ -283,11 +443,10 @@ const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
                         }}
                     >
                         <span
-                            className="text-sm font-extrabold whitespace-nowrap tracking-[0.02em]"
-                            style={{
-                                color: r.color,
-                                transition: 'color 0.25s',
-                            }}
+                            className="whitespace-nowrap font-extrabold tracking-wide transition-colors duration-300
+                                text-xs sm:text-sm
+                            "
+                            style={{ color: r.color }}
                         >
                             {r.name}
                         </span>
@@ -299,7 +458,7 @@ const CarouselRow = ({ items, direction = 'left', paused, setPaused }) => {
 }
 
 const RecruiterCarousel = ({ paused, setPaused }) => (
-    <div className="flex flex-col gap-3.5">
+    <div className="flex flex-col gap-3 sm:gap-3.5">
         <CarouselRow items={ROW1} direction="left" paused={paused} setPaused={setPaused} />
         <CarouselRow items={ROW2} direction="right" paused={paused} setPaused={setPaused} />
     </div>
@@ -312,29 +471,77 @@ const Placements = () => {
     return (
         <section
             ref={sectionRef}
-            className="bg-[#F8FAFC] py-16 sm:py-18 lg:py-20 w-full box-border overflow-hidden"
-            style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
+            className="bg-[#F8FAFC] w-full overflow-hidden font-['DM_Sans','Inter',sans-serif]
+                py-10
+                sm:py-12
+                md:py-14
+                lg:py-16
+                xl:py-18
+                2xl:py-20
+            "
         >
+            <style>{`
+                @keyframes scrollLeft {
+                    0%   { transform: translateX(0); }
+                    100% { transform: translateX(-33.33%); }
+                }
+                @keyframes scrollRight {
+                    0%   { transform: translateX(-33.33%); }
+                    100% { transform: translateX(0); }
+                }
+                @keyframes fadeUp {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to   { opacity: 1; transform: translateY(0); }
+                }
+            `}</style>
+
             {/* ── Section Header ── */}
             <div
-                className="px-4 sm:px-6 md:px-8 lg:px-12 pb-10 sm:mb-12 lg:mb-[52px]"
+                className="
+                    px-4     mb-8
+                    sm:px-6  sm:mb-9
+                    md:px-10 md:mb-10
+                    lg:px-14 lg:mb-11
+                    xl:px-18 xl:mb-12
+                    2xl:px-22 2xl:mb-12
+                    transition-all duration-700
+                "
                 style={{
                     opacity: inView ? 1 : 0,
                     transform: inView ? 'translateY(0)' : 'translateY(20px)',
                     transition: 'all 0.6s ease',
                 }}
             >
-                <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#C8102E] mb-2.5 flex items-center gap-2">
-                    <span className="w-6 h-0.5 bg-[#C8102E] inline-block" />
+                {/* Tag */}
+                <p className="flex items-center gap-2 font-extrabold tracking-[0.25em] uppercase text-[var(--viva-red)] mb-2.5
+                    text-[10px] sm:text-[10px] md:text-xs
+                ">
+                    <span className="inline-block h-0.5 bg-[var(--viva-red)] flex-shrink-0
+                        w-5 sm:w-5 md:w-6
+                    " />
                     Placements
                 </p>
 
-                <div className="flex items-end justify-between flex-wrap gap-4">
-                    {/* Original: clamp(32px,4vw,48px) → breakpoints */}
-                    <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black text-[#0F1C3D] leading-[1.1] m-0">
+                {/* Heading row */}
+                <div className="flex items-end justify-between flex-wrap
+                    gap-3 sm:gap-4
+                ">
+                    <h2 className="font-black text-[var(--viva-navy)] leading-[1.1] m-0
+                        text-2xl
+                        sm:text-3xl
+                        md:text-3xl
+                        lg:text-4xl
+                        xl:text-4xl
+                        2xl:text-4xl
+                    ">
                         Our Recruiters
                     </h2>
-                    <p className="text-sm text-gray-500 max-w-[420px] m-0 leading-relaxed">
+                    <p className="text-gray-500 leading-relaxed m-0
+                        text-xs    max-w-[200px]
+                        sm:text-xs sm:max-w-xs
+                        md:text-sm md:max-w-sm
+                        xl:text-sm xl:max-w-md
+                    ">
                         50+ top companies visit VIVA College annually for campus recruitment drives across all streams.
                     </p>
                 </div>
@@ -342,13 +549,12 @@ const Placements = () => {
 
             {/* ── Carousel ── */}
             <div
-                style={{
-                    opacity: inView ? 1 : 0,
-                    transition: 'opacity 0.8s ease 0.2s',
-                }}
+                className="transition-opacity duration-700 delay-200"
+                style={{ opacity: inView ? 1 : 0 }}
             >
                 <RecruiterCarousel paused={paused} setPaused={setPaused} />
             </div>
+
         </section>
     )
 }

@@ -707,7 +707,7 @@ const ExaminationPage = () => {
 
             {/* ── Main Content ── */}
             <div className="px-4 sm:px-8 md:px-16 xl:px-24 py-0">
-                <div className="grid grid-cols-1 xl:grid-cols-4 gap-0">
+                <div className="pb-10 grid grid-cols-1 xl:grid-cols-4 gap-0">
 
                     {/* LEFT SIDEBAR — hidden on mobile, shown on xl+ */}
                     <div className="hidden xl:block xl:col-span-1 bg-white border-r border-gray-100 min-h-screen pt-8 pr-6">
@@ -722,7 +722,7 @@ const ExaminationPage = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-1">
+                        <div className="pb-8 flex flex-col gap-1">
                             {tabs.map((tab) => (
                                 <button key={tab.id}
                                     onClick={() => setActiveTab(tab.id)}
@@ -740,10 +740,10 @@ const ExaminationPage = () => {
 
                         {/* Contact box */}
                         <div className="mt-8 p-4 bg-[var(--viva-navy)] rounded-2xl">
-                            <p className="text-white font-bold text-xs mb-3">📞 Exam Cell Contact</p>
+                            <p className="text-white font-bold text-xs pb-3">📞 Exam Cell Contact</p>
                             <p className="text-white/60 text-xs leading-relaxed">Mon–Sat, 10am–4pm</p>
-                            <p className="text-white text-xs font-bold mt-1">+91 250 2450 891</p>
-                            <p className="text-white/60 text-xs mt-2">exam@vivacollege.org</p>
+                            <p className="text-white text-xs font-bold pt-1">+91 250 2450 891</p>
+                            <p className="text-white/60 text-xs pt-2">exam@vivacollege.org</p>
                         </div>
                     </div>
 
@@ -773,36 +773,38 @@ const ExaminationPage = () => {
                                 </div>
 
                                 {/* Timetable table */}
-                                <div className="bg-white rounded-3xl border border-gray-100 overflow-hidden">
-                                    <div className="px-4 sm:px-6 py-4 bg-gradient-to-r from-[#1A2D5A] to-[#0F1C3D] flex items-center justify-between">
-                                        <h3 className="text-white font-extrabold text-xs sm:text-sm tracking-wide uppercase">
-                                            {timetableType === "college" ? "College Internal Exams — 2024–25" : "University Exams — 2024–25"}
-                                        </h3>
-                                        {timetableType === "university" && (
-                                            <a href="https://mu.ac.in/examinations/time-table" target="_blank" rel="noopener noreferrer"
-                                                className="text-white/60 text-xs hover:text-white flex items-center gap-1 transition-colors">
-                                                Full MU Timetable ↗
-                                            </a>
-                                        )}
-                                    </div>
+                                <div className='pt-10'>
+                                    <div className="bg-white rounded-3xl border border-gray-100 overflow-hidden ">
+                                        <div className="px-4 sm:px-6 py-4 bg-gradient-to-r from-[#1A2D5A] to-[#0F1C3D] flex items-center justify-between">
+                                            <h3 className="text-white font-extrabold text-xs sm:text-sm tracking-wide uppercase">
+                                                {timetableType === "college" ? "College Internal Exams — 2024–25" : "University Exams — 2024–25"}
+                                            </h3>
+                                            {timetableType === "university" && (
+                                                <a href="https://mu.ac.in/examinations/time-table" target="_blank" rel="noopener noreferrer"
+                                                    className="text-white/60 text-xs hover:text-white flex items-center gap-1 transition-colors">
+                                                    Full MU Timetable ↗
+                                                </a>
+                                            )}
+                                        </div>
 
-                                    {/* Header row — hidden on small, shown md+ */}
-                                    <div className="hidden md:grid grid-cols-5 px-4 sm:px-6 py-3 bg-gray-50 border-b border-gray-100">
-                                        {["Examination", "Stream", "Date", "Time", "Venue"].map((h) => (
-                                            <p key={h} className="text-xs font-extrabold text-gray-400 uppercase tracking-wide">{h}</p>
-                                        ))}
-                                    </div>
+                                        {/* Header row — hidden on small, shown md+ */}
+                                        <div className="hidden  md:grid grid-cols-5 px-4 sm:px-6 py-3 bg-gray-50 border-b border-gray-100">
+                                            {["Examination", "Stream", "Date", "Time", "Venue"].map((h) => (
+                                                <p key={h} className="text-xs font-extrabold text-gray-400 uppercase tracking-wide">{h}</p>
+                                            ))}
+                                        </div>
 
-                                    <div className="divide-y divide-gray-50">
-                                        {timetableData[timetableType].map((row, i) => (
-                                            <div key={i} className="grid grid-cols-1 md:grid-cols-5 px-4 sm:px-6 py-4 hover:bg-gray-50 transition-colors group gap-1 md:gap-0">
-                                                <p className="text-sm font-bold text-[var(--viva-navy)]">{row.exam}</p>
-                                                <p className="text-xs text-gray-500 font-medium">{row.stream}</p>
-                                                <p className="text-xs font-bold text-[var(--viva-red)]">{row.date}</p>
-                                                <p className="text-xs text-gray-500">{row.time}</p>
-                                                <p className="text-xs text-gray-400">{row.venue}</p>
-                                            </div>
-                                        ))}
+                                        <div className="divide-y divide-gray-50">
+                                            {timetableData[timetableType].map((row, i) => (
+                                                <div key={i} className="grid grid-cols-1 md:grid-cols-5 px-4 sm:px-6 py-4 hover:bg-gray-50 transition-colors group gap-1 md:gap-0">
+                                                    <p className="text-sm font-bold text-[var(--viva-navy)]">{row.exam}</p>
+                                                    <p className="text-xs text-gray-500 font-medium">{row.stream}</p>
+                                                    <p className="text-xs font-bold text-[var(--viva-red)]">{row.date}</p>
+                                                    <p className="text-xs text-gray-500">{row.time}</p>
+                                                    <p className="text-xs text-gray-400">{row.venue}</p>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
 
@@ -817,6 +819,7 @@ const ExaminationPage = () => {
                             </div>
                         )}
 
+
                         {/* ── RESULTS ── */}
                         {activeTab === "results" && (
                             <div className="space-y-6 pb-10">
@@ -825,7 +828,7 @@ const ExaminationPage = () => {
                                     <p className="text-gray-400 text-sm mt-1 pb-6">All results are published on the Mumbai University portal</p>
                                 </div>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div className="pb-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {resultsLinks.map((item, i) => (
                                         <a key={i} href={item.href} target="_blank" rel="noopener noreferrer"
                                             className="group flex items-start gap-4 p-4 sm:p-5 bg-white rounded-2xl border border-gray-100 hover:border-[var(--viva-navy)] hover:shadow-lg transition-all duration-200">
@@ -886,12 +889,13 @@ const ExaminationPage = () => {
                                     className="flex items-center justify-center gap-2 w-full py-3.5 sm:py-4 bg-[var(--viva-navy)] text-white font-bold text-sm rounded-2xl hover:bg-[var(--viva-dark)] transition-all duration-300 hover:scale-[1.01]">
                                     Download Hall Ticket from MU Portal ↗
                                 </a>
-
-                                <div className="p-4 bg-amber-50 border border-amber-200 rounded-2xl flex gap-3">
-                                    <span>⚠️</span>
-                                    <p className="text-xs text-amber-700 leading-relaxed">
-                                        Hall tickets are available approximately 10 days before the exam. If you face any issue downloading, contact the Exam Cell immediately.
-                                    </p>
+                                <div className='pt-6'>
+                                    <div className="p-4 bg-amber-50 border border-amber-200 rounded-2xl flex gap-3">
+                                        <span>⚠️</span>
+                                        <p className="text-xs text-amber-700 leading-relaxed">
+                                            Hall tickets are available approximately 10 days before the exam. If you face any issue downloading, contact the Exam Cell immediately.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         )}
@@ -920,11 +924,12 @@ const ExaminationPage = () => {
                                 </div>
 
                                 <FaqAccordion items={atktInfo} />
-
-                                <a href="https://mu.ac.in/examinations/atkt" target="_blank" rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-2 w-full py-3.5 sm:py-4 bg-[var(--viva-navy)] text-white font-bold text-sm rounded-2xl hover:bg-[var(--viva-dark)] transition-all duration-300">
-                                    ATKT Details on MU Portal ↗
-                                </a>
+                                <div className='pt-10'>
+                                    <a href="https://mu.ac.in/examinations/atkt" target="_blank" rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 w-full py-3.5 sm:py-4 bg-[var(--viva-navy)] text-white font-bold text-sm rounded-2xl hover:bg-[var(--viva-dark)] transition-all duration-300">
+                                        ATKT Details on MU Portal ↗
+                                    </a>
+                                </div>
                             </div>
                         )}
 
@@ -936,7 +941,7 @@ const ExaminationPage = () => {
                                     <p className="text-gray-400 text-sm mt-1 pb-6">Fill and submit your exam forms on time to avoid late fees</p>
                                 </div>
 
-                                <div className="space-y-3">
+                                <div className="space-y-3 pb-10">
                                     {examForms.map((form, i) => (
                                         <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-5 bg-white rounded-2xl border border-gray-100 hover:border-[var(--viva-navy)] hover:shadow-md transition-all duration-200 group gap-3 sm:gap-0">
                                             <div className="flex items-center gap-3 sm:gap-4">
@@ -976,7 +981,7 @@ const ExaminationPage = () => {
                                     <p className="text-gray-400 text-sm mt-1 pb-6">Read carefully before appearing for any examination</p>
                                 </div>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div className="pb-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {guidelines.map((g, i) => (
                                         <div key={i} className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 bg-white rounded-2xl border border-gray-100 hover:border-[var(--viva-navy)] hover:shadow-md transition-all duration-200 group">
                                             <span className="text-xl sm:text-2xl flex-shrink-0">{g.icon}</span>

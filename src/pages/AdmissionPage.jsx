@@ -972,7 +972,7 @@ const AdmissionsPage = () => {
             <Header />
 
             {/* ── PAGE HERO ── */}
-            <div className="bg-[var(--viva-navy)] pt-24 sm:pt-28 lg:pt-32 pb- relative overflow-hidden">
+            <div className="bg-[var(--viva-navy)] pt-24 sm:pt-28 lg:pt-32 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-white/5 rounded-bl-[150px] sm:rounded-bl-[250px]" />
                 <div className="absolute bottom-0 left-0 w-40 sm:w-64 h-40 sm:h-64 bg-white/5 rounded-tr-[80px] sm:rounded-tr-[120px]" />
 
@@ -1040,7 +1040,7 @@ const AdmissionsPage = () => {
 
             {/* ── MAIN CONTENT ── */}
             <div className="px-4 sm:px-8 md:px-12 xl:px-24 py-0">
-                <div className="grid grid-cols-1 xl:grid-cols-4 gap-0">
+                <div className="pb-20 grid grid-cols-1 xl:grid-cols-4 gap-0">
 
                     {/* ── LEFT SIDEBAR — desktop xl+ only ── */}
                     <div className="hidden xl:block xl:col-span-1 bg-white border-r border-gray-100 min-h-screen pt-8 pr-6">
@@ -1319,9 +1319,7 @@ const AdmissionsPage = () => {
                         )}
 
                         {/* Bottom CTA */}
-                        {/* <div className="p-5 sm:p-6 bg-[var(--viva-navy)] rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-5 relative overflow-hidden pb-10"> */}
-                        {/* Bottom CTA */}
-<div className="p-5 sm:p-6 bg-[var(--viva-navy)] rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-5 relative overflow-hidden mb-10">
+                        <div className="p-5 sm:p-6 bg-[var(--viva-navy)] rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-5 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 bg-white/5 rounded-bl-[60px] sm:rounded-bl-[80px]" />
                             <div className="relative z-10">
                                 <h4 className="text-white font-extrabold text-base sm:text-xl">Ready to Apply?</h4>
@@ -1342,7 +1340,7 @@ const AdmissionsPage = () => {
             </div>
             <Footer />
         </div>
-        
+
     )
 }
 

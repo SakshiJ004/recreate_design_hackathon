@@ -811,7 +811,7 @@ const CampusLife = () => {
                         Campus Life
                     </p>
                     {/* Original: clamp(36px, 4vw, 52px) → sm:36 md:40 lg:44 xl:48 2xl:52 */}
-                    <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-black text-[#0F1C3D] leading-[1.1]">
+                    <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-black text-[#0F1C3D] leading-[1.1]">
                         Life at Viva.
                     </h2>
                 </div>

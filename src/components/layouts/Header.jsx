@@ -3,11 +3,11 @@ import logo from '../../assets/images/viva-logo.png'
 import Navbar from './Navbar'
 
 const NAV_LINKS = [
-    { label: "About Us", href: "/about" },
-    { label: "Programmes", href: "/programmes" },
+    { label: "About Us", href: "/#about" },
+    { label: "Programmes", href: "/#programmes" },
     { label: "Admission", href: "/admissions" },
     { label: "Examination", href: "/examination" },
-    { label: "Campus Life", href: "/campus-life" },
+    { label: "Campus Life", href: "/#campus-life" },
     { label: "Contact Us", href: "/contact" },
 ]
 

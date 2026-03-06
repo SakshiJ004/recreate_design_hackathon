@@ -5,7 +5,7 @@ const NAV_LINKS = [
     { label: "Programmes", href: "/#programmes" },
     { label: "Admission", href: "/admissions" },
     { label: "Examination", href: "/examination" },
-    { label: "Campus Life", href: "/campus-life" },
+    { label: "Campus Life", href: "/#campus-life" },
     { label: "Contact Us", href: "/contact" },
 ]
 

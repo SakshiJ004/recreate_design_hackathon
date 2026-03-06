@@ -801,7 +801,7 @@ const CampusLife = () => {
             className="bg-[#F8FAFC] py-20 w-full font-[DM_Sans,Inter,sans-serif]"
         >
             {/* ── Full width wrapper ── */}
-            <div className="w-full px-4 sm:px-8 lg:px-12 box-border">
+            <div className="w-full px-4 sm:px-8 lg:px-[48px] box-border">
 
                 {/* ── Section header ── */}
                 <div className="mb-9">
@@ -871,7 +871,10 @@ const CampusLife = () => {
                             ].map((p, i) => (
                                 <div
                                     key={i}
-                                    className="rounded-2xl overflow-hidden relative cursor-pointer transition-transform duration-200 hover:scale-[0.97]"
+                                    className="rounded-2xl overflow-hidden relative cursor-pointer"
+                                    style={{ transition: 'transform 0.2s' }}
+                                    onMouseEnter={e => e.currentTarget.style.transform = 'scale(0.97)'}
+                                    onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                                 >
                                     <img
                                         src={p.img}
@@ -898,7 +901,10 @@ const CampusLife = () => {
                             return (
                                 <div
                                     key={i}
-                                    className="bg-white border border-gray-200 rounded-[20px] p-6 flex flex-col gap-3.5 transition-all duration-200 cursor-default hover:shadow-[0_12px_32px_rgba(15,28,61,0.10)] hover:-translate-y-1"
+                                    className="bg-white border border-gray-200 rounded-[20px] p-6 flex flex-col gap-3.5 cursor-default"
+                                    style={{ transition: 'box-shadow 0.25s, transform 0.25s' }}
+                                    onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 12px 32px rgba(15,28,61,0.10)'; e.currentTarget.style.transform = 'translateY(-4px)' }}
+                                    onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' }}
                                 >
                                     {/* Icon */}
                                     <div className="w-[52px] h-[52px] rounded-[14px] bg-slate-100 flex items-center justify-center shrink-0">
@@ -924,7 +930,10 @@ const CampusLife = () => {
                                             <IconUsers size={14} color="#9CA3AF" /> {club.members}+ members
                                         </span>
                                         <button
-                                            className="bg-[#0F1C3D] text-white border-none rounded-full px-4 py-1.5 text-xs font-bold cursor-pointer font-[inherit] transition-colors duration-200 hover:bg-[#C8102E]"
+                                            className="bg-[#0F1C3D] text-white border-none rounded-full px-4 py-1.5 text-xs font-bold cursor-pointer font-[inherit]"
+                                            style={{ transition: 'background 0.2s' }}
+                                            onMouseEnter={e => e.target.style.background = '#C8102E'}
+                                            onMouseLeave={e => e.target.style.background = '#0F1C3D'}
                                         >
                                             Join →
                                         </button>
@@ -1004,7 +1013,10 @@ const CampusLife = () => {
                         ].map((p, i) => (
                             <div
                                 key={i}
-                                className={`${p.h} rounded-2xl relative overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[0.97] bg-[#1E293B]`}
+                                className={`${p.h} rounded-2xl relative overflow-hidden cursor-pointer bg-[#1E293B]`}
+                                style={{ transition: 'transform 0.25s' }}
+                                onMouseEnter={e => e.currentTarget.style.transform = 'scale(0.97)'}
+                                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                             >
                                 {p.img && (
                                     <img

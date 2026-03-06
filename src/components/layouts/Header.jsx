@@ -60,7 +60,7 @@ const Header = () => {
                 md:px-5  md:py-2
                 lg:px-8  lg:py-2.5
                 xl:px-10 xl:py-3
-                2xl:px-12 
+                2xl:px-12 2xl:py-3
             ">
                 <div className="flex items-center justify-between">
 

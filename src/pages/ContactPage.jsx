@@ -643,7 +643,7 @@ const ContactPage = () => {
 
             {/* ── Info cards strip ── */}
             <div className="px-4 sm:px-8 md:px-12 xl:px-[48px] -mt-7">
-                <div className="grid gap-3 sm:gap-4
+                <div className="pt-10 grid gap-3 sm:gap-4
                     grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {INFO_CARDS.map((card, i) => (
                         <div key={i} className="bg-white rounded-[18px] border border-gray-100 flex gap-3 sm:gap-4 items-start

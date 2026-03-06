@@ -578,7 +578,7 @@ const EventsNotices = () => {
         >
             {/* ── Section Header ── */}
             <div
-                className="mb-10 sm:mb-12 lg:mb-[52px]"
+                className="pb-10 sm:mb-12 lg:mb-[52px]"
                 style={{
                     opacity: inView ? 1 : 0,
                     transform: inView ? 'translateY(0)' : 'translateY(24px)',
@@ -590,7 +590,7 @@ const EventsNotices = () => {
                     What's Happening
                 </p>
                 {/* Original: clamp(32px,4vw,48px) → sm:32 md:36 lg:40 xl:44 2xl:48 */}
-                <h2 className="text-[32px] md:text-[36px] lg:text-[40px] xl:text-[44px] 2xl:text-[48px] font-black text-[#0F1C3D] leading-[1.1] m-0">
+                <h2 className="text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black text-[#0F1C3D] leading-[1.1] m-0">
                     Events & Notices
                 </h2>
             </div>
@@ -609,7 +609,7 @@ const EventsNotices = () => {
                     }}
                 >
                     {/* Column header */}
-                    <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center justify-between pb-6">
                         <div className="flex items-center gap-2.5">
                             <div className="w-[34px] h-[34px] rounded-[10px] bg-[#0F1C3D] flex items-center justify-center text-[#D4A017]">
                                 <IconCalendar size={16} />
@@ -650,16 +650,16 @@ const EventsNotices = () => {
                             >
                                 {/* Date badge */}
                                 <div
-                                    className="shrink-0 w-[54px] h-[60px] rounded-[14px] flex flex-col items-center justify-center gap-[2px]"
+                                    className="shrink-0 w-[50px] h-[50px] rounded-[14px] flex flex-col items-center justify-center gap-[2px]"
                                     style={{
                                         background: hoveredEvent === i ? '#C8102E' : '#0F1C3D',
                                         transition: 'background 0.25s',
                                     }}
                                 >
-                                    <span className="text-[22px] font-black text-white leading-none">
+                                    <span className="text-[18px] font-black text-white leading-none">
                                         {ev.date.day}
                                     </span>
-                                    <span className="text-[9px] font-bold text-[#D4A017] tracking-[0.12em]">
+                                    <span className="text-[8px] font-bold text-[#D4A017] tracking-[0.12em]">
                                         {ev.date.month}
                                     </span>
                                 </div>
@@ -667,7 +667,7 @@ const EventsNotices = () => {
                                 {/* Content */}
                                 <div className="flex-1 min-w-0">
                                     <div className="flex items-center gap-2 mb-[5px] flex-wrap">
-                                        <p className="font-extrabold text-[13px] sm:text-[14px] text-[#0F1C3D] m-0">
+                                        <p className="font-extrabold text-[10px] sm:text-[12px] text-[#0F1C3D] m-0">
                                             {ev.title}
                                         </p>
                                         <span
@@ -705,7 +705,7 @@ const EventsNotices = () => {
                     }}
                 >
                     {/* Column header */}
-                    <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center justify-between pb-6">
                         <div className="flex items-center gap-2.5">
                             <div className="w-[34px] h-[34px] rounded-[10px] bg-[#C8102E] flex items-center justify-center text-white relative">
                                 <IconBell size={16} />
@@ -731,7 +731,7 @@ const EventsNotices = () => {
                     </div>
 
                     {/* Filter tabs */}
-                    <div className="flex gap-1.5 mb-5 flex-wrap">
+                    <div className="flex gap-1.5 pb-5 flex-wrap">
                         {FILTER_TABS.map((tab, i) => (
                             <button
                                 key={i}
@@ -759,7 +759,7 @@ const EventsNotices = () => {
                                     key={`${activeFilter}-${i}`}
                                     onMouseEnter={() => setHoveredNotice(i)}
                                     onMouseLeave={() => setHoveredNotice(null)}
-                                    className="flex gap-3.5 items-start px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl cursor-pointer"
+                                    className="flex gap-3.5 items-start px-3 sm:px-4 py-3 sm:py-3 rounded-xl cursor-pointer"
                                     style={{
                                         border: '1px solid #F3F4F6',
                                         borderLeft: `3px solid ${ps.border}`,
@@ -771,7 +771,7 @@ const EventsNotices = () => {
                                 >
                                     {/* Icon box */}
                                     <div
-                                        className="w-8 h-8 shrink-0 rounded-lg flex items-center justify-center"
+                                        className="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center"
                                         style={{
                                             background: ps.bg,
                                             color: ps.text,
@@ -783,7 +783,7 @@ const EventsNotices = () => {
 
                                     {/* Text */}
                                     <div className="flex-1 min-w-0">
-                                        <p className="text-[12px] sm:text-[13px] font-semibold text-[#1E293B] mb-1.5 leading-[1.5]">
+                                        <p className="text-[11px] sm:text-[12px] font-semibold text-[#1E293B] pb-1.5 leading-[1.5]">
                                             {notice.text}
                                         </p>
                                         <div className="flex items-center gap-2.5">

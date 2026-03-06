@@ -746,10 +746,10 @@ const About = () => {
                                 font-extrabold text-[var(--viva-navy)] leading-[1.2]
                                 mt-3 text-2xl
                                 sm:mt-4 sm:text-3xl
-                                md:text-3xl
-                                lg:text-4xl
-                                xl:text-4xl
-                                2xl:text-5xl
+                                md:text-2xl
+                                lg:text-3xl
+                                xl:text-3xl
+                                2xl:text-4xl
                             ">
                                 Shaping Leaders<br />
                                 <span className="text-[var(--viva-red)]">Since 1988.</span>
@@ -767,7 +767,7 @@ const About = () => {
                                 sm:mt-5 sm:text-sm
                                 md:text-sm
                                 xl:text-base
-                                2xl:text-lg
+                                2xl:text-md
                             ">
                                 Viva College, Mumbai — a premier institution under Vishnu Waman Thakur Charitable Trust,
                                 offering Arts, Commerce, and Science programs. Affiliated to University of Mumbai and

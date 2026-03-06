@@ -98,7 +98,7 @@ const Navbar = ({ visible = true }) => {
             hidden xl:block absolute left-1/2 z-30
             transition-all duration-500
             -translate-x-[42%] bottom-[-22px] w-[80%]
-            2xl:-translate-x-[44%] 2xl:bottom-[-28px] 2xl:w-[76%]
+            2xl:-translate-x-[40%] 2xl:bottom-[-28px] 2xl:w-[76%]
             3xl:-translate-x-[38%] 3xl:bottom-[-34px] 3xl:w-[72%]
             ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
         `}>
@@ -108,7 +108,7 @@ const Navbar = ({ visible = true }) => {
                 flex items-center justify-between
                 px-6    py-2
                 xl:px-8  xl:py-2.5
-                2xl:px-12 2xl:py-3
+                2xl:px-12 2xl:py-2.5
                 3xl:px-20 3xl:py-4
             ">
                 <ul className="

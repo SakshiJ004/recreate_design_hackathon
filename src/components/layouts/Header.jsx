@@ -333,7 +333,7 @@ const Header = () => {
                             "
                             />
                             {searchQuery ? (
-                                <button onClick={() => setSearchQuery('')} className="text-gray-400 hover:text-[var(--viva-red)] transition-colors cursor-pointer">
+                                <button onClick={() => setSearchQuery('')} className="text-[var(--viva-navy)] hover:text-[var(--viva-red)] transition-colors cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         className="w-4 h-4 2xl:w-5 2xl:h-5 3xl:w-6 3xl:h-6"
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
